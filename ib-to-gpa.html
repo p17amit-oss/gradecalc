@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-page="ib-to-gpa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IB Score to GPA Calculator — International Baccalaureate Conversion</title>
+  <meta name="description" content="Convert your IB total score (0–45) to a US GPA equivalent. IB 45 = 4.0, 38–41 = 3.7, 34–37 = 3.3. Moderate Confidence — verified approximation. Instant results.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/ib-to-gpa.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOURDOMAIN.com/ib-to-gpa.html">
+  <meta property="og:title" content="IB Score to GPA Calculator — International Baccalaureate Conversion">
+  <meta property="og:description" content="Convert your IB total score (0–45) to a US GPA equivalent. IB 45 = 4.0, 38–41 = 3.7, 34–37 = 3.3. Moderate Confidence — verified approximation.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IB Score to GPA Calculator">
+  <meta name="twitter:description" content="Convert your IB total score (0–45) to a US GPA equivalent. IB 45 = 4.0, 38–41 = 3.7, 34–37 = 3.3. Instant results.">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOURDOMAIN.com/"},{"@type":"ListItem","position":2,"name":"IB to GPA","item":"https://YOURDOMAIN.com/ib-to-gpa.html"}]}</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"IB Score to GPA Calculator","description":"Convert your IB total score (0–45) to a US GPA equivalent. Based on verified approximation methodology with Moderate Confidence.","url":"https://YOURDOMAIN.com/ib-to-gpa.html","applicationCategory":"EducationApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What IB score is equivalent to a 4.0 GPA?","acceptedAnswer":{"@type":"Answer","text":"An IB total score of 42–45 is generally considered equivalent to a 4.0 GPA. A perfect score of 45 clearly maps to 4.0. Scores in the 42–44 range are also typically treated as equivalent to 4.0 or A by US admissions, as they represent the top percentile of IB students globally (fewer than 1% of IB candidates score 45)."}},{"@type":"Question","name":"Is IB harder than AP?","acceptedAnswer":{"@type":"Answer","text":"IB and AP serve different purposes and are not directly comparable, but the IB Diploma Programme is generally considered more holistically demanding. AP exams are course-specific assessments; the IB Diploma requires students to study six subjects across multiple areas simultaneously, write a 4,000-word Extended Essay, complete the Theory of Knowledge course, and fulfil CAS requirements. The IB's compressed 7-point subject scale (where 7 is perfect) also means grading is stricter than AP's 5-point scale."}},{"@type":"Question","name":"What IB score is needed for Harvard or MIT?","acceptedAnswer":{"@type":"Answer","text":"Harvard and MIT do not publish a minimum IB score, but admitted IB students typically have scores of 42–45. A score of 38–41 can be competitive for very selective schools if accompanied by exceptional extracurriculars, essays, and recommendations. A score below 35 would be below the typical range for the most selective US universities."}},{"@type":"Question","name":"How does the IB scale convert to US GPA?","acceptedAnswer":{"@type":"Answer","text":"The IB total score (0–45) converts approximately as follows: 42–45 = 4.0 (A), 38–41 = 3.7 (A-), 34–37 = 3.3 (B+), 30–33 = 3.0 (B), 26–29 = 2.7 (B-), 22–25 = 2.3 (C+), below 22 = below 2.0. These are Moderate Confidence estimates based on US admissions practice and common equivalency tables."}},{"@type":"Question","name":"What is an IB score of 38 in GPA?","acceptedAnswer":{"@type":"Answer","text":"An IB score of 38 is generally equivalent to approximately 3.7 (A-) on the US 4.0 GPA scale. This is a strong score — the global average IB Diploma score is approximately 30–31, meaning 38 is well above average and competitive for most US universities."}},{"@type":"Question","name":"Do US universities prefer IB over AP?","acceptedAnswer":{"@type":"Answer","text":"US universities view both IB and AP favourably as evidence of academic rigor. The IB Diploma is often seen as a more cohesive international curriculum, which international students typically have. AP courses are more common among US domestic students. Neither is universally preferred — admissions committees evaluate them in the context of what was available to each applicant at their school."}},{"@type":"Question","name":"Is a 30 IB score good for US colleges?","acceptedAnswer":{"@type":"Answer","text":"A score of 30 is the approximate global average for IB Diploma recipients, and receiving the diploma itself is an achievement (not all students pass). For US college admissions, a 30 is competitive for many good universities but is below the typical range for the most selective schools. It corresponds to approximately a 3.0 GPA equivalent."}},{"@type":"Question","name":"What is the average IB score?","acceptedAnswer":{"@type":"Answer","text":"The global average IB Diploma score is approximately 30–31 out of 45. The pass threshold is 24 (with certain minimum subject requirements). About 80% of IB candidates receive the full diploma. The average among diploma candidates is higher than the average for all registered students because not all complete the full diploma programme."}}]}</script>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body class="page-fade-in">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo"><div class="navbar__logo-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>GradeCalc</a>
+      <ul class="navbar__links" role="list">
+        <li><a href="/gpa-calculator.html" class="navbar__link">GPA Calculator</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="navbar__link">CGPA → %</a></li>
+        <li><a href="/grade-needed-calculator.html" class="navbar__link">Grade Needed</a></li>
+        <li><a href="/wes-gpa-calculator.html" class="navbar__link">WES GPA</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-action="toggle-theme" aria-label="Toggle dark mode"><span data-theme-icon aria-hidden="true"></span></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <button class="nav-drawer__close" id="nav-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <a href="/" class="nav-drawer__link">Home</a>
+    <a href="/gpa-calculator.html" class="nav-drawer__link">GPA Calculator</a>
+    <a href="/cgpa-to-percentage.html" class="nav-drawer__link">CGPA to Percentage</a>
+    <a href="/percentage-to-gpa.html" class="nav-drawer__link">Percentage to GPA</a>
+    <a href="/wes-gpa-calculator.html" class="nav-drawer__link">WES GPA Calculator</a>
+    <a href="/grade-needed-calculator.html" class="nav-drawer__link">Grade Needed</a>
+    <a href="/uk-to-us-gpa.html" class="nav-drawer__link">UK to US GPA</a>
+    <a href="/ib-to-gpa.html" class="nav-drawer__link">IB to GPA</a>
+  </nav>
+
+  <main id="main" class="page-main">
+    <div class="page-header">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="page-header__breadcrumb__sep" aria-hidden="true">›</span>
+        <span aria-current="page">IB to GPA</span>
+      </nav>
+      <h1 class="page-header__title">IB Score to GPA Calculator</h1>
+      <p class="page-header__desc">Convert your International Baccalaureate total score (0–45) to a US GPA equivalent. IB 45 = 4.0 · IB 38–41 = 3.7 · IB 34–37 = 3.3. Moderate Confidence.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-layout__main">
+        <div class="calc-card">
+          <div class="calc-card__header">
+            <div class="calc-card__title">IB Score to US GPA</div>
+            <div class="calc-card__subtitle">Enter your IB Diploma total score (integer, 0–45)</div>
+          </div>
+
+          <div class="field" id="field-ib">
+            <label class="field__label" for="input-ib">IB Total Score <span style="color:var(--color-text-tertiary);font-weight:400;">(0 – 45)</span></label>
+            <div class="field__hint">Your total IB Diploma score — the sum of your six subject scores plus up to 3 bonus points for Extended Essay and Theory of Knowledge</div>
+            <input type="number" id="input-ib" class="input" placeholder="e.g. 38" min="0" max="45" step="1" inputmode="numeric" autocomplete="off">
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <!-- Result -->
+          <div class="result-box result-box--hidden" id="result-box" aria-live="polite">
+            <div class="result-number" id="result-number">—</div>
+            <div class="result-meta" id="result-meta"></div>
+            <div class="result-source" id="result-source"></div>
+            <div class="result-note" id="result-note"></div>
+            <div class="result-warning-note" id="result-warning" style="display:none;"></div>
+          </div>
+
+          <div class="callout callout--info" style="margin-top:var(--space-4);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="callout__icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Moderate Confidence — verified approximation based on US admissions practice and common equivalency tables. IB does not publish an official GPA conversion.</span>
+          </div>
+
+          <!-- Conversion table -->
+          <div style="margin-top:var(--space-6);">
+            <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);color:var(--color-text-secondary);">IB Score to GPA Reference Table</div>
+            <table style="width:100%;font-size:var(--text-sm);border-collapse:collapse;" aria-label="IB score to GPA conversion reference table">
+              <thead>
+                <tr style="border-bottom:2px solid var(--color-border);">
+                  <th style="text-align:left;padding:var(--space-2) var(--space-3) var(--space-2) 0;color:var(--color-text-secondary);">IB Score</th>
+                  <th style="text-align:left;padding:var(--space-2) var(--space-3) var(--space-2) 0;color:var(--color-text-secondary);">US GPA</th>
+                  <th style="text-align:left;padding:var(--space-2) 0;color:var(--color-text-secondary);">Letter Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">42–45</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">4.0</td><td style="padding:var(--space-2) 0;">A</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">38–41</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">3.7</td><td style="padding:var(--space-2) 0;">A−</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">34–37</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">3.3</td><td style="padding:var(--space-2) 0;">B+</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">30–33</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">3.0</td><td style="padding:var(--space-2) 0;">B</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">26–29</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">2.7</td><td style="padding:var(--space-2) 0;">B−</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border-subtle);"><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">22–25</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">2.3</td><td style="padding:var(--space-2) 0;">C+</td></tr>
+                <tr><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">Below 22</td><td style="padding:var(--space-2) var(--space-3) var(--space-2) 0;">≤ 2.0</td><td style="padding:var(--space-2) 0;">C or below</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-2);margin-bottom:0;">Moderate Confidence. IB does not publish an official GPA conversion table.</p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content-section reveal">
+          <div class="prose">
+            <h2>The International Baccalaureate programme explained</h2>
+            <p>The International Baccalaureate (IB) Diploma Programme is a two-year pre-university curriculum designed for students aged 16–19, offered by over 5,000 schools in 159 countries. Founded in Geneva in 1968, the IB was created to provide a rigorous, internationally recognised qualification for students moving between countries and for those seeking admission to universities worldwide. Today, approximately 170,000 students complete the IB Diploma each year.</p>
+            <p>The IB Diploma requires students to study six subjects simultaneously — typically three at Higher Level (HL) and three at Standard Level (SL) — drawn from six subject groups: Studies in Language and Literature, Language Acquisition, Individuals and Societies, Sciences, Mathematics, and The Arts (or an additional subject from another group). In addition to six subject examinations, students must complete the Extended Essay (a 4,000-word independent research project), the Theory of Knowledge (TOK) course, and Creativity, Activity, Service (CAS) hours.</p>
+
+            <h2>Why IB scores need conversion for US applications</h2>
+            <p>US universities use GPA (Grade Point Average) on a 4.0 scale as their standard academic metric. The IB uses a total score on a 45-point scale, where each of the six subjects is marked 1–7, and up to 3 bonus points can be awarded for the Extended Essay and Theory of Knowledge combination. This means the maximum possible score is 45 (6 subjects × 7 points + 3 bonus points), and the minimum score to receive the diploma is typically 24 with certain subject minimums.</p>
+            <p>The conversion from IB total score to US GPA is not officially defined by the IB organisation or by any US standardised body — there is no single authoritative conversion table. The equivalencies used by this calculator are based on common practice in US admissions offices, community-reported outcomes, and equivalency guidance published by credential evaluation services. All results carry Moderate Confidence.</p>
+
+            <h2>The IB scale: what 45 means and why it matters</h2>
+            <p>A perfect score of 45 on the IB Diploma is extraordinarily rare — fewer than 300 students worldwide (out of approximately 170,000 diploma candidates) achieve this in any given year, representing roughly 0.15% of all diploma candidates. A score of 45 is unambiguously equivalent to a 4.0 GPA and represents top-1% academic performance globally. US universities, including the most selective, treat a 45 as the highest possible academic distinction.</p>
+            <p>Scores in the 40–44 range are also outstanding — a 40 represents approximately the top 5–10% of IB candidates. Scores in the 35–39 range are above average and competitive for strong universities, though not always for the most selective programs. The global average IB Diploma total score is approximately 30–31, which represents solid academic performance.</p>
+
+            <h2>How US colleges view IB scores</h2>
+            <p>US colleges view IB diplomas favourably as evidence of academic rigour and preparation. Admissions offices at research universities are generally familiar with the IB system and understand that an IB 7 in a Higher Level subject represents excellent achievement. The holistic nature of the IB Diploma — requiring breadth, an independent research project, and service commitments — aligns with many US universities' educational philosophies.</p>
+            <p>For undergraduate applications, many US universities also offer credit or placement for high IB scores, similar to AP credit. The threshold varies by institution — typically IB Higher Level scores of 5, 6, or 7 may qualify for credit in the corresponding subject area. Check with each individual university for their IB credit policy.</p>
+            <p>For graduate school applications, IB scores are a secondary consideration — graduate programs care most about undergraduate degree GPA and research experience. However, a strong IB background may be mentioned in personal statements as evidence of early academic rigour.</p>
+
+            <h2>Worked examples at key score points</h2>
+            <p><strong>IB 45 (perfect score):</strong> Equivalent to 4.0 US GPA. Represents the top 0.1% of IB candidates globally. Competitive for all universities worldwide, including the most selective US programs.</p>
+            <p><strong>IB 42:</strong> Equivalent to approximately 4.0 US GPA. Top 1–2% globally. Excellent for all US universities.</p>
+            <p><strong>IB 38:</strong> Equivalent to approximately 3.7 (A-) US GPA. Top 10–15% globally. Competitive for most selective US programs; borderline for ultra-selective programs without other strong factors.</p>
+            <p><strong>IB 34:</strong> Equivalent to approximately 3.3 (B+) US GPA. Above the global average. Competitive for strong universities but below the typical range for the most selective programs.</p>
+            <p><strong>IB 30:</strong> Equivalent to approximately 3.0 (B) US GPA. Near the global average. Competitive for many universities; below average for highly selective programs.</p>
+
+            <h2>Limitations of this conversion tool</h2>
+            <p>This tool converts IB total scores to US GPA equivalents using banded approximations. The conversion is not linear — a difference of 1 point at the top of the scale (e.g., 44 vs. 45) carries different significance than a difference of 1 point in the middle (e.g., 30 vs. 31). Additionally, admissions committees may consider the mix of HL vs. SL subjects and scores on individual subjects, not just the total. A student with IB 38 from all HL subjects is typically viewed differently from one with the same total from primarily SL subjects.</p>
+            <p>Use this calculator as a planning and benchmarking tool, not as an official credential evaluation. For applications requiring an official GPA equivalent, consult a credential evaluation service.</p>
+          </div>
+
+          <!-- FAQ -->
+          <div class="faq-section" id="faq">
+            <h2 class="section-title" style="margin-top:var(--space-12);">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What IB score is equivalent to a 4.0 GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">An IB total score of 42–45 is generally considered equivalent to a 4.0 GPA. A perfect score of 45 clearly maps to 4.0. Scores in the 42–44 range are also typically treated as equivalent to 4.0 by US admissions, as they represent the top global percentile of IB students. Fewer than 1% of IB candidates score 45.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is IB harder than AP?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">The IB Diploma Programme is generally considered more holistically demanding than individual AP courses. The IB requires studying six subjects simultaneously plus Extended Essay, TOK, and CAS. AP exams are course-specific. The IB's compressed 7-point scale (where 7 is perfect) also means grading is stricter than AP's 5-point scale.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What IB score is needed for Harvard or MIT?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Harvard and MIT do not publish a minimum IB score, but admitted IB students typically have scores of 42–45. A score of 38–41 can be competitive if accompanied by exceptional extracurriculars, essays, and recommendations. A score below 35 would be below the typical range for the most selective US universities.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does the IB scale convert to US GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">The IB total score (0–45) converts approximately as follows: 42–45 = 4.0 (A); 38–41 = 3.7 (A-); 34–37 = 3.3 (B+); 30–33 = 3.0 (B); 26–29 = 2.7 (B-); 22–25 = 2.3 (C+); below 22 = 2.0 or below. These are Moderate Confidence estimates. The IB does not publish an official GPA conversion.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is an IB score of 38 in GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">An IB score of 38 is generally equivalent to approximately 3.7 (A-) on the US 4.0 GPA scale. This is a strong score — the global average IB Diploma score is approximately 30–31, meaning 38 is well above average and competitive for most US universities and graduate programs.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do US universities prefer IB over AP?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">US universities view both IB and AP favourably as evidence of academic rigour. The IB Diploma is often seen as a more cohesive international curriculum. AP courses are more common among US domestic students. Neither is universally preferred — admissions committees evaluate them based on what was available to each applicant at their school.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is a 30 IB score good for US colleges?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">A score of 30 is near the global average for IB Diploma recipients, and receiving the diploma itself is an achievement. For US college admissions, a 30 is competitive for many good universities but is below the typical range for highly selective schools. It corresponds to approximately a 3.0 GPA equivalent.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the average IB score?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">The global average IB Diploma score is approximately 30–31 out of 45. The pass threshold is 24 (with certain minimum subject requirements). About 80% of registered IB Diploma candidates receive the full diploma. The average among diploma recipients is slightly higher than the overall average for all registered students.</div></div>
+            </div>
+          </div>
+
+          <!-- Related -->
+          <div class="related-section reveal">
+            <h2 class="section-title">Related Calculators</h2>
+            <div class="related-grid">
+              <a href="/uk-to-us-gpa.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+                <div><div class="related-card__title">UK to US GPA Converter</div><div class="related-card__desc">Convert UK First, 2:1, 2:2 degree classifications to US GPA</div></div>
+              </a>
+              <a href="/percentage-to-gpa.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75z"/></svg></div>
+                <div><div class="related-card__title">Percentage to GPA Calculator</div><div class="related-card__desc">Convert any percentage to a US GPA estimate</div></div>
+              </a>
+              <a href="/gpa-calculator.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+                <div><div class="related-card__title">GPA Calculator</div><div class="related-card__desc">Calculate cumulative GPA from individual course grades</div></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.calc-layout__main -->
+
+      <aside class="calc-layout__sidebar" aria-label="Additional information">
+        <div class="ad-slot ad-slot--sidebar" data-position="sidebar" aria-hidden="true"></div>
+
+        <div class="calc-card" style="padding:var(--space-5);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">IB Score Benchmarks</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--text-sm);">
+              <span>45 (perfect)</span><span style="color:var(--color-accent);font-weight:var(--font-weight-semibold);">4.0 (A)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--text-sm);">
+              <span>38–41</span><span style="color:var(--color-accent);font-weight:var(--font-weight-semibold);">3.7 (A−)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--text-sm);">
+              <span>34–37</span><span style="color:var(--color-accent);font-weight:var(--font-weight-semibold);">3.3 (B+)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--text-sm);">
+              <span>30–33 (avg.)</span><span style="color:var(--color-accent);font-weight:var(--font-weight-semibold);">3.0 (B)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--text-sm);">
+              <span>24 (pass)</span><span style="color:var(--color-text-secondary);">~2.3 (C+)</span>
+            </div>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-3);margin-bottom:0;">Moderate Confidence. Not an official IB conversion.</p>
+        </div>
+
+        <div class="calc-card" style="padding:var(--space-5);margin-top:var(--space-4);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">International GPA Converters</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+            <a href="/uk-to-us-gpa.html" style="font-size:var(--text-sm);color:var(--color-accent);">→ UK to US GPA</a>
+            <a href="/wes-gpa-calculator.html" style="font-size:var(--text-sm);color:var(--color-accent);">→ WES GPA Calculator</a>
+            <a href="/percentage-to-gpa.html" style="font-size:var(--text-sm);color:var(--color-accent);">→ Percentage to GPA</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div><a href="/" class="footer__brand">GradeCalc</a><p class="footer__tagline">Honest grade conversion for international students.</p><p class="footer__copy">© 2026 GradeCalc. For informational purposes only.</p></div>
+      <ul class="footer__links">
+        <li><a href="/" class="footer__link">All Calculators</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="footer__link">CGPA to Percentage</a></li>
+        <li><a href="/percentage-to-gpa.html" class="footer__link">Percentage to GPA</a></li>
+        <li><a href="/gpa-calculator.html" class="footer__link">GPA Calculator</a></li>
+        <li><a href="/wes-gpa-calculator.html" class="footer__link">WES GPA Calculator</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/ui.js" defer></script>
+  <script src="/js/ai-advisor.js" defer></script>
+  <script>
+  (function () {
+    'use strict';
+
+    function calculate() {
+      if (!window.Calculators || !window.Validation || !window.ResultRenderer) return;
+
+      var inputEl = document.getElementById('input-ib');
+      var fieldEl = document.getElementById('field-ib');
+      var raw = inputEl.value.trim();
+
+      // Validate using ibScore validator
+      var vResult = window.Validation.ibScore(raw);
+      window.Validation.applyToField(fieldEl, vResult);
+      if (!vResult.valid) return;
+
+      var score = parseInt(raw, 10);
+      var result = window.Calculators.ibToGPA(score);
+      var box = document.getElementById('result-box');
+      window.ResultRenderer.render(box, result);
+
+      if (window.Analytics) window.Analytics.calculatorUsed('ib-to-gpa');
+      if (window.AiAdvisor) window.AiAdvisor.setInputData({ type: 'ib-to-gpa', ibScore: score, result: result });
+    }
+
+    function init() {
+      var debouncedCalc = window.debounce ? window.debounce(calculate, 400) : calculate;
+      document.getElementById('input-ib').addEventListener('input', debouncedCalc);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      window.addEventListener('load', init);
+    }
+  }());
+  </script>
+</body>
+</html>

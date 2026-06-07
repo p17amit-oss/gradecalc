@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-page="percentage-to-letter-grade">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage to Letter Grade Calculator — US Grading Scale</title>
+  <meta name="description" content="Convert any percentage to a US letter grade (A, B+, C−, etc.) and the matching GPA value. Standard scale: 93%+=A, 90–92%=A−, 87–89%=B+. High Confidence, instant.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/percentage-to-letter-grade.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOURDOMAIN.com/percentage-to-letter-grade.html">
+  <meta property="og:title" content="Percentage to Letter Grade Calculator — US Grading Scale">
+  <meta property="og:description" content="Convert any percentage to a US letter grade (A, B+, C−, etc.) and the matching GPA value. Standard scale: 93%+=A, 90–92%=A−, 87–89%=B+.">
+  <meta name="twitter:card" content="summary">
+  <meta name="keywords" content="percentage to letter grade, percentage to grade converter">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOURDOMAIN.com/"},{"@type":"ListItem","position":2,"name":"Percentage to Letter Grade","item":"https://YOURDOMAIN.com/percentage-to-letter-grade.html"}]}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Percentage to Letter Grade Calculator","description":"Convert any percentage score to a US letter grade and GPA equivalent using the standard grading scale.","url":"https://YOURDOMAIN.com/percentage-to-letter-grade.html","applicationCategory":"EducationApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a B+ in percentage?","acceptedAnswer":{"@type":"Answer","text":"B+ corresponds to 87–89% on the standard US grading scale, and equals 3.3 GPA on the 4.0 scale. It represents strong above-average performance, just below an A−."}},{"@type":"Question","name":"What percentage is an A grade?","acceptedAnswer":{"@type":"Answer","text":"93% and above is an A (4.0 GPA). 90–92% is an A− (3.7 GPA). Both represent excellent performance. Most US universities do not distinguish A and A+ on the GPA scale — both count as 4.0."}},{"@type":"Question","name":"What is 75% as a letter grade?","acceptedAnswer":{"@type":"Answer","text":"75% falls in the C range. The standard scale assigns 73–76% as a C (2.0 GPA). However, some schools place 75% in the C+ range (77–79%). On the standard 10-point scale used here, 75% = C (2.0 GPA)."}},{"@type":"Question","name":"What is 80% as a letter grade?","acceptedAnswer":{"@type":"Answer","text":"80% is a B− on the standard US grading scale. The B− range is 80–82%, earning 2.7 GPA. It represents satisfactory performance above average but below a B (83–86%, 3.0 GPA)."}},{"@type":"Question","name":"What letter grade is a 3.5 GPA?","acceptedAnswer":{"@type":"Answer","text":"A 3.5 GPA falls between B+ (3.3 GPA, 87–89%) and A− (3.7 GPA, 90–92%). It corresponds to roughly 87–90% on the standard percentage scale. This is a strong GPA, often required for Dean's List recognition."}},{"@type":"Question","name":"What is 70% in letter grade?","acceptedAnswer":{"@type":"Answer","text":"70% is a C− on the standard US grading scale. The C− range is 70–72%, earning 1.7 GPA. It is technically a passing grade in most undergraduate programs, but many graduate programs require B− or better."}},{"@type":"Question","name":"Is a C a passing grade in college?","acceptedAnswer":{"@type":"Answer","text":"At most US universities, a C (2.0 GPA, 73–76%) counts as passing and earns credit. However, many graduate programs require a minimum of B− (2.7 GPA) to count a course toward the degree. Some majors also require higher minimums in core courses."}},{"@type":"Question","name":"What percentage is a D?","acceptedAnswer":{"@type":"Answer","text":"D+ = 67–69% (1.3 GPA), D = 63–66% (1.0 GPA), D− = 60–62% (0.7 GPA). Grades below 60% are typically an F (0.0 GPA) at most US institutions. A D is technically passing in many programs but does not meet minimum standards for graduate admission or continuation in most majors."}}]}</script>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body class="page-fade-in">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" id="navbar"><div class="navbar__inner"><a href="/" class="navbar__logo"><div class="navbar__logo-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>GradeCalc</a><ul class="navbar__links" role="list"><li><a href="/gpa-calculator.html" class="navbar__link">GPA Calculator</a></li><li><a href="/cgpa-to-percentage.html" class="navbar__link">CGPA → %</a></li><li><a href="/grade-needed-calculator.html" class="navbar__link">Grade Needed</a></li><li><a href="/wes-gpa-calculator.html" class="navbar__link">WES GPA</a></li></ul><div class="navbar__actions"><button class="theme-toggle" data-action="toggle-theme" aria-label="Toggle dark mode"><span data-theme-icon aria-hidden="true"></span></button><button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button></div></div></nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation"><button class="nav-drawer__close" id="nav-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button><a href="/" class="nav-drawer__link">Home</a><a href="/gpa-calculator.html" class="nav-drawer__link">GPA Calculator</a><a href="/cgpa-to-percentage.html" class="nav-drawer__link">CGPA to Percentage</a><a href="/percentage-to-gpa.html" class="nav-drawer__link">Percentage to GPA</a><a href="/wes-gpa-calculator.html" class="nav-drawer__link">WES GPA Calculator</a><a href="/grade-needed-calculator.html" class="nav-drawer__link">Grade Needed</a><a href="/uk-to-us-gpa.html" class="nav-drawer__link">UK to US GPA</a><a href="/uk-degree-classification.html" class="nav-drawer__link">UK Degree Classification</a></nav>
+
+  <main id="main" class="page-main">
+    <div class="page-header">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="page-header__breadcrumb__sep">›</span><span aria-current="page">Percentage to Letter Grade</span></nav>
+      <h1 class="page-header__title">Percentage to Letter Grade Calculator</h1>
+      <p class="page-header__desc">Enter any score from 0–100 to get your US letter grade (A, B+, C−, etc.) and the matching GPA value on the 4.0 scale. Uses the standard academic grading scale with plus/minus grades.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-layout__main">
+        <div class="calc-card">
+          <div class="calc-card__header">
+            <div class="calc-card__title">Percentage to Letter Grade</div>
+            <div class="calc-card__subtitle">Standard US scale — 93%+ = A, 90–92% = A−, 87–89% = B+, etc. · High Confidence</div>
+          </div>
+
+          <div class="field" id="field-pct">
+            <label class="field__label" for="input-pct">Your score <span style="color:var(--color-text-tertiary);font-weight:400;">(0 – 100)</span></label>
+            <input type="number" id="input-pct" class="input" placeholder="e.g. 87" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off">
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <button id="calc-btn" class="btn btn--primary" style="width:100%;margin-top:var(--space-4);" disabled>Convert to Letter Grade</button>
+
+          <div id="result-box" class="result-box" style="margin-top:var(--space-6);display:none;" aria-live="polite"></div>
+        </div>
+
+        <div class="content-section reveal">
+          <div class="prose">
+            <h2>Understanding the US Letter Grade System</h2>
+            <p>The US letter grade system is the primary academic grading standard used at high schools, colleges, and universities across the United States. Unlike raw percentage scores, letter grades translate your performance into a categorical scale that allows comparison across different courses, professors, and institutions. The modern US system uses letter grades with plus and minus modifiers, giving 13 distinct grade levels from A+ down to F.</p>
+
+            <h2>The Standard US Grading Scale</h2>
+            <p>The most widely used scale divides scores into bands tied to letter grades and GPA points. At the top, 93% and above earns an A (4.0 GPA), while 90–92% earns an A− (3.7 GPA). In the B range: B+ covers 87–89% (3.3 GPA), B covers 83–86% (3.0 GPA), and B− covers 80–82% (2.7 GPA). The C range spans from C+ at 77–79% (2.3 GPA) through C at 73–76% (2.0 GPA) and C− at 70–72% (1.7 GPA). Below that, D+ runs 67–69% (1.3 GPA), D covers 63–66% (1.0 GPA), and D− reaches 60–62% (0.7 GPA). Anything below 60% is typically an F.</p>
+
+            <h2>Plus/Minus Grading: What It Means</h2>
+            <p>Not all institutions use plus/minus grading. Some award only A, B, C, D, and F — a simpler 5-point letter scale without the granularity of plus and minus modifiers. When a school uses plus/minus, the GPA calculation changes meaningfully: a B+ (3.3) versus a plain B (3.0) is a 0.3-point difference per course, which compounds significantly over multiple semesters. If your institution does not use plus/minus, your A is treated as 4.0 and your B as 3.0, regardless of whether you scored 80% or 89%.</p>
+
+            <h2>Grade Inflation: Why the Same Letter Grade Differs by Institution</h2>
+            <p>Grade inflation is a well-documented phenomenon in US higher education. Studies consistently show that A is now the most commonly awarded grade at four-year US colleges — a shift from decades past when a C was considered average. This means a B from one institution may represent different levels of mastery than a B from another. Graduate admissions committees at selective universities are aware of this and contextualise grades by institution reputation, major, and course difficulty. A 3.5 GPA from a school known for rigorous grading may carry more weight than a 3.8 from a school with more lenient standards.</p>
+
+            <h2>What Each Letter Grade Means for Graduate School</h2>
+            <p>If you are considering graduate school, letter grades carry particular significance. Most top-ranked US graduate programs (MBA, law, medical, engineering MS/PhD) expect a minimum undergraduate GPA of 3.0 (B average) just to be considered. Competitive programs at top schools typically admit students with 3.5+ GPAs. However, the minimum is not the average — many admitted students have GPAs well above the stated floor, particularly for funded PhD positions. A single course grade rarely defines your application, but a consistent pattern of C grades in core courses can be a significant concern.</p>
+            <p>Graduate admissions committees also look at grade trends. A student with a 2.7 GPA early in their undergraduate career who finished with straight As may be viewed more favourably than a student who maintained a flat 3.2 throughout. Demonstrating academic growth and mastery in relevant coursework matters.</p>
+
+            <h2>Worked Examples</h2>
+            <p>To illustrate: a student scoring 91% in Biology 101 earns an A− (3.7 GPA). In the same semester, they score 84% in Calculus (B, 3.0 GPA), 78% in English Composition (C+, 2.3 GPA), and 95% in Computer Science (A, 4.0 GPA). If each course is 3 credit hours, the weighted GPA calculation gives: (3.7 + 3.0 + 2.3 + 4.0) × 3 ÷ 12 = 3.25 for that semester.</p>
+            <p>Note how a 78% (C+) drags the semester GPA down despite strong performance in other courses. This illustrates why each course's letter grade matters, not just your overall average performance.</p>
+
+            <h2>Difference Between Letter Grades and GPA</h2>
+            <p>Letter grades are the categorical labels assigned per course. GPA (Grade Point Average) is the weighted numerical average of those letter grades across all courses, weighted by credit hours. While the two are directly related, they serve different purposes. Your transcript shows letter grades for each course. Your cumulative GPA is what graduate schools, scholarship committees, and employers see as a single summary statistic. Both matter: a transcript with mostly As in easy electives but Cs in core major courses tells a different story than a consistent 3.5 across all coursework.</p>
+
+            <h2>Using This Calculator</h2>
+            <p>Enter any percentage score from 0 to 100. The calculator applies the standard US plus/minus grading scale to return your letter grade, GPA equivalent, and a description of what that grade typically represents academically. Results are labeled High Confidence because this is a direct, standardised table lookup — there is no estimation or approximation involved. The standard US scale is defined, not derived.</p>
+          </div>
+
+          <div class="faq-section" id="faq">
+            <h2 class="section-title" style="margin-top:var(--space-12);">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a B+ in percentage?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">B+ corresponds to 87–89% on the standard US grading scale, and equals 3.3 GPA on the 4.0 scale. It represents strong above-average performance, just below an A−. Many graduate programs view B+ as a strong grade in core courses.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What percentage is an A grade?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">93% and above is an A (4.0 GPA). 90–92% is an A− (3.7 GPA). Both represent excellent performance. Most US universities do not distinguish A and A+ on the GPA scale — both count as 4.0. If your institution uses A+ as a separate category, it still typically maps to 4.0, not 4.3.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is 75% as a letter grade?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">75% falls in the C range on the standard scale. The standard scale assigns 73–76% as a C (2.0 GPA). Some institutions with different band widths may place 75% at the lower edge of C+. Using the standard 10-band scale used here, 75% = C (2.0 GPA).</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is 80% as a letter grade?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">80% is a B− on the standard US grading scale. The B− range is 80–82%, earning 2.7 GPA. It represents satisfactory above-average performance but falls below a B (83–86%, 3.0 GPA). For most undergraduate programs, B− counts as a passing grade with full credit.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What letter grade is a 3.5 GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">A 3.5 GPA falls between B+ (3.3 GPA, 87–89%) and A− (3.7 GPA, 90–92%). It corresponds to roughly 87–90% on the percentage scale. This is often the threshold for Dean's List recognition and is competitive for many graduate programs.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is 70% in letter grade?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">70% is a C− on the standard US grading scale. The C− range is 70–72%, earning 1.7 GPA. It is technically a passing grade in most undergraduate programs but many graduate programs require B− or better for a course to count toward the degree.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is a C a passing grade in college?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">At most US universities, a C (2.0 GPA, 73–76%) counts as passing and earns credit toward your degree. However, many graduate programs require a minimum of B− (2.7 GPA) for a course to count. Some majors also set higher minimums in core courses — for example, engineering programs commonly require a B or better in calculus sequences.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What percentage is a D?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">D+ = 67–69% (1.3 GPA), D = 63–66% (1.0 GPA), D− = 60–62% (0.7 GPA). Grades below 60% are typically an F (0.0 GPA). A D is technically passing in many undergraduate programs but does not meet the minimum standards for graduate school admission and may not satisfy major requirements at your institution.</div></div>
+            </div>
+          </div>
+
+          <div class="related-section reveal">
+            <h2 class="section-title">Related Calculators</h2>
+            <div class="related-grid">
+              <a href="/letter-grade-to-gpa.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg></div><div><div class="related-card__title">Letter Grade to GPA</div><div class="related-card__desc">Convert A, B+, C and other letter grades to 4.0 scale GPA</div></div></a>
+              <a href="/gpa-calculator.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008z"/></svg></div><div><div class="related-card__title">GPA Calculator</div><div class="related-card__desc">Calculate weighted GPA from multiple courses and credit hours</div></div></a>
+              <a href="/percentage-to-gpa.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662"/></svg></div><div><div class="related-card__title">Percentage to GPA</div><div class="related-card__desc">Direct percentage to US GPA conversion with WES iGPA estimate</div></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc-layout__sidebar">
+        <div class="ad-slot ad-slot--sidebar" data-position="sidebar" aria-hidden="true"></div>
+        <div class="calc-card" style="padding:var(--space-5);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">Quick reference: US grade scale</div>
+          <table style="width:100%;font-size:var(--text-xs);border-collapse:collapse;">
+            <thead><tr><th style="text-align:left;padding:var(--space-1) 0;color:var(--color-text-tertiary);font-weight:500;">Percentage</th><th style="text-align:center;padding:var(--space-1) 0;color:var(--color-text-tertiary);font-weight:500;">Grade</th><th style="text-align:right;padding:var(--space-1) 0;color:var(--color-text-tertiary);font-weight:500;">GPA</th></tr></thead>
+            <tbody>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">93–100%</td><td style="text-align:center;font-weight:700;color:var(--color-success);">A</td><td style="text-align:right;color:var(--color-text-secondary);">4.0</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">90–92%</td><td style="text-align:center;font-weight:700;color:var(--color-success);">A−</td><td style="text-align:right;color:var(--color-text-secondary);">3.7</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">87–89%</td><td style="text-align:center;font-weight:700;color:var(--color-success);">B+</td><td style="text-align:right;color:var(--color-text-secondary);">3.3</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">83–86%</td><td style="text-align:center;font-weight:700;color:var(--color-warning);">B</td><td style="text-align:right;color:var(--color-text-secondary);">3.0</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">80–82%</td><td style="text-align:center;font-weight:700;color:var(--color-warning);">B−</td><td style="text-align:right;color:var(--color-text-secondary);">2.7</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">77–79%</td><td style="text-align:center;font-weight:700;color:var(--color-warning);">C+</td><td style="text-align:right;color:var(--color-text-secondary);">2.3</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">73–76%</td><td style="text-align:center;font-weight:700;color:var(--color-error);">C</td><td style="text-align:right;color:var(--color-text-secondary);">2.0</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">70–72%</td><td style="text-align:center;font-weight:700;color:var(--color-error);">C−</td><td style="text-align:right;color:var(--color-text-secondary);">1.7</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">&lt;60%</td><td style="text-align:center;font-weight:700;color:var(--color-error);">F</td><td style="text-align:right;color:var(--color-text-secondary);">0.0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="footer__inner"><div><a href="/" class="footer__brand">GradeCalc</a><p class="footer__tagline">Honest grade conversion for international students.</p><p class="footer__copy">© 2026 GradeCalc. For informational purposes only.</p></div><ul class="footer__links"><li><a href="/" class="footer__link">All Calculators</a></li><li><a href="/cgpa-to-percentage.html" class="footer__link">CGPA to Percentage</a></li><li><a href="/percentage-to-gpa.html" class="footer__link">Percentage to GPA</a></li><li><a href="/gpa-calculator.html" class="footer__link">GPA Calculator</a></li></ul></div></footer>
+
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/ui.js" defer></script>
+  <script src="/js/ai-advisor.js" defer></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var input   = document.getElementById('input-pct');
+    var calcBtn = document.getElementById('calc-btn');
+    var resultBox = document.getElementById('result-box');
+
+    function updateButtonState() {
+      var val = parseFloat(input.value);
+      calcBtn.disabled = !(input.value !== '' && !isNaN(val) && val >= 0 && val <= 100);
+    }
+
+    function calculate() {
+      var vr = window.Validation.percentage(input.value);
+      window.Validation.applyToField(document.getElementById('field-pct'), vr);
+      if (!vr.valid) {
+        resultBox.style.display = 'none';
+        return;
+      }
+      var pct = vr.value;
+      var data = window.Calculators.percentageToLetterGrade(pct);
+      resultBox.style.display = 'block';
+      window.ResultRenderer.render(resultBox, data);
+      if (window.AiAdvisor) window.AiAdvisor.setInputData({ percentage: pct, letterGrade: data.result, gpa: data.gpa, calculator: 'percentage_to_letter_grade' });
+      if (window.Analytics) window.Analytics.calculatorUsed('percentage_to_letter_grade');
+    }
+
+    input.addEventListener('input', function () {
+      updateButtonState();
+      window.debounce(calculate, 300)();
+    });
+    input.addEventListener('blur', calculate);
+    calcBtn.addEventListener('click', calculate);
+  });
+  </script>
+</body>
+</html>

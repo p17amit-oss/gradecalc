@@ -1,0 +1,166 @@
+/* ============================================================
+   DESIGN TOKENS — Single source of truth for all visual values
+   Never use raw hex/px/rem values in component CSS files.
+   Always reference a token from this file.
+   ============================================================ */
+
+:root {
+  /* ── Colors: Light mode ── */
+  --color-bg-primary:       #ffffff;
+  --color-bg-secondary:     #f8f8f8;
+  --color-bg-card:          #ffffff;
+  --color-border:           #e5e5e5;
+  --color-border-subtle:    #f0f0f0;
+  --color-text-primary:     #0a0a0a;
+  --color-text-secondary:   #525252;
+  --color-text-tertiary:    #a3a3a3;
+  --color-accent:           #7C3AED;
+  --color-accent-hover:     #6d28d9;
+  --color-accent-subtle:    #f5f3ff;
+  --color-success:          #16a34a;
+  --color-success-subtle:   #f0fdf4;
+  --color-warning:          #d97706;
+  --color-warning-subtle:   #fffbeb;
+  --color-error:            #dc2626;
+  --color-error-subtle:     #fef2f2;
+
+  /* Confidence tier colors */
+  --color-confidence-high:     #16a34a;
+  --color-confidence-moderate: #d97706;
+  --color-confidence-estimate: #737373;
+
+  /* Grade band result colors */
+  --color-grade-a:     #16a34a;
+  --color-grade-b:     #d97706;
+  --color-grade-c:     #ea580c;
+  --color-grade-d:     #dc2626;
+
+  /* ── Typography ── */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-result: 3rem;
+
+  --leading-xs:   1rem;
+  --leading-sm:   1.25rem;
+  --leading-base: 1.5rem;
+  --leading-lg:   1.75rem;
+  --leading-xl:   1.75rem;
+  --leading-2xl:  2rem;
+  --leading-3xl:  2.25rem;
+  --leading-tight: 1;
+
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* ── Spacing (8px grid) ── */
+  --space-1:  0.25rem;   /* 4px  */
+  --space-2:  0.5rem;    /* 8px  */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+
+  /* ── Border radius ── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (removed in dark mode) ── */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+
+  /* ── Layout ── */
+  --max-width: 1200px;
+  --nav-height: 60px;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   300ms ease;
+}
+
+/* ── Dark mode overrides ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg-primary:     #0a0a0a;
+    --color-bg-secondary:   #111111;
+    --color-bg-card:        #141414;
+    --color-border:         #262626;
+    --color-border-subtle:  #1a1a1a;
+    --color-text-primary:   #fafafa;
+    --color-text-secondary: #a3a3a3;
+    --color-text-tertiary:  #525252;
+    --color-accent:         #8b5cf6;
+    --color-accent-hover:   #7c3aed;
+    --color-accent-subtle:  #1e1b4b;
+    --color-success-subtle: #052e16;
+    --color-warning-subtle: #1c1107;
+    --color-error-subtle:   #1c0707;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+  }
+}
+
+/* Manual dark mode override via toggle */
+[data-theme="dark"] {
+  --color-bg-primary:     #0a0a0a;
+  --color-bg-secondary:   #111111;
+  --color-bg-card:        #141414;
+  --color-border:         #262626;
+  --color-border-subtle:  #1a1a1a;
+  --color-text-primary:   #fafafa;
+  --color-text-secondary: #a3a3a3;
+  --color-text-tertiary:  #525252;
+  --color-accent:         #8b5cf6;
+  --color-accent-hover:   #7c3aed;
+  --color-accent-subtle:  #1e1b4b;
+  --color-success-subtle: #052e16;
+  --color-warning-subtle: #1c1107;
+  --color-error-subtle:   #1c0707;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+}
+
+[data-theme="light"] {
+  --color-bg-primary:     #ffffff;
+  --color-bg-secondary:   #f8f8f8;
+  --color-bg-card:        #ffffff;
+  --color-border:         #e5e5e5;
+  --color-border-subtle:  #f0f0f0;
+  --color-text-primary:   #0a0a0a;
+  --color-text-secondary: #525252;
+  --color-text-tertiary:  #a3a3a3;
+  --color-accent:         #7C3AED;
+  --color-accent-hover:   #6d28d9;
+  --color-accent-subtle:  #f5f3ff;
+  --color-success-subtle: #f0fdf4;
+  --color-warning-subtle: #fffbeb;
+  --color-error-subtle:   #fef2f2;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+}

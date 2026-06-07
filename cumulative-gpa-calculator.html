@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-page="cumulative-gpa-calculator">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cumulative GPA Calculator — Combine Multiple Semesters</title>
+  <meta name="description" content="Calculate cumulative GPA across multiple semesters or terms. Enter GPA and credit hours per semester. Weighted exact arithmetic — High Confidence. Add up to 10 terms.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/cumulative-gpa-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOURDOMAIN.com/cumulative-gpa-calculator.html">
+  <meta property="og:title" content="Cumulative GPA Calculator — Combine Multiple Semesters">
+  <meta property="og:description" content="Calculate your cumulative GPA across multiple semesters. Enter GPA and credit hours per term. Weighted exact arithmetic. Up to 10 terms.">
+  <meta name="twitter:card" content="summary">
+  <meta name="keywords" content="cumulative gpa calculator, gpa calculator multiple semesters">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOURDOMAIN.com/"},{"@type":"ListItem","position":2,"name":"Cumulative GPA Calculator","item":"https://YOURDOMAIN.com/cumulative-gpa-calculator.html"}]}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Cumulative GPA Calculator","description":"Calculate cumulative GPA across multiple semesters or terms using weighted arithmetic. Enter GPA and credit hours per term.","url":"https://YOURDOMAIN.com/cumulative-gpa-calculator.html","applicationCategory":"EducationApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"Cumulative GPA = Σ(semester GPA × semester credits) ÷ Σ(all credits). Multiply each semester's GPA by its credit hours, sum those products, then divide by total credit hours across all semesters. This weighted average gives more weight to semesters with more credits."}},{"@type":"Question","name":"How much does one semester affect cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"It depends on how many total credits you have. If you have 60 credits at 3.0 GPA and take 15 credits next semester, those 15 credits represent 20% of your 75-credit total. A perfect 4.0 semester on 15 credits raises a 60-credit 3.0 to (3.0×60 + 4.0×15) ÷ 75 = 3.2."}},{"@type":"Question","name":"Can I raise a 2.8 GPA to 3.0?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the calculator to enter your completed semesters and model future semesters. With 60 completed credits at 2.8 GPA, to reach 3.0 over 30 remaining credits requires those 30 credits to average 3.4 GPA (B+ average). Identify how many semesters that covers and plan accordingly."}},{"@type":"Question","name":"What is a cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"Cumulative GPA is the weighted average of all your grades across all completed terms at an institution, weighted by credit hours. It appears on your official transcript and is the figure that graduate schools, employers, and scholarship committees evaluate when assessing your academic record."}},{"@type":"Question","name":"Does repeating a course help cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"It depends on your institution's policy. Some schools replace the original grade with the repeated grade (grade forgiveness or grade replacement). Others keep both grades and average them. Others only replace for GPA purposes but show both on the transcript. Check your registrar's academic policies before repeating a course for grade purposes."}},{"@type":"Question","name":"What cumulative GPA do I need for grad school?","acceptedAnswer":{"@type":"Answer","text":"Most US graduate programs state a minimum of 3.0 cumulative GPA for admission. However, the average admitted GPA at competitive programs is typically 3.5–3.9. Professional schools (medicine, law, MBA at top programs) often have averages of 3.6–3.9. A GPA below the stated minimum is not an automatic rejection — strong research experience, test scores, or recommendations can offset a lower GPA."}},{"@type":"Question","name":"How many semesters to raise GPA from 3.0 to 3.5?","acceptedAnswer":{"@type":"Answer","text":"If you have 60 credits at 3.0 GPA and need to reach 3.5, the shortfall is 0.5 GPA points. Required: (3.5 × (60 + x) − 3.0 × 60) ÷ x = target semester GPA. To go from 3.0 to 3.5 on 60 existing credits, you need approximately 60 additional credits at a 4.0 GPA. Raising GPA becomes progressively harder as your credit total grows."}},{"@type":"Question","name":"Is cumulative GPA the same as overall GPA?","acceptedAnswer":{"@type":"Answer","text":"Yes — cumulative GPA and overall GPA refer to the same concept: the weighted average of all grades across all completed terms at your institution. Institutional GPA is calculated across all semesters at that school. Transfer credits may or may not be included depending on institutional policy."}}]}</script>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <style>
+    .term-row { display:grid; grid-template-columns:1fr 120px 100px 40px; gap:var(--space-3); align-items:center; padding:var(--space-3) 0; border-bottom:1px solid var(--color-border-subtle); }
+    .term-row:last-of-type { border-bottom:none; }
+    .term-row .input { height:44px; }
+    @media(max-width:600px) { .term-row { grid-template-columns:1fr 1fr; gap:var(--space-2); } .term-row .term-label { grid-column:1/-1; } }
+    .remove-btn { background:none; border:none; cursor:pointer; color:var(--color-text-tertiary); padding:var(--space-2); border-radius:var(--radius-sm); transition:color var(--transition-fast),background var(--transition-fast); display:flex; align-items:center; justify-content:center; min-width:36px; min-height:36px; }
+    .remove-btn:hover { color:var(--color-error); background:var(--color-error-subtle); }
+    .result-stats { display:grid; grid-template-columns:1fr 1fr 1fr; gap:var(--space-4); margin-top:var(--space-4); }
+    @media(max-width:500px) { .result-stats { grid-template-columns:1fr 1fr; } }
+    .stat-card { background:var(--color-bg-secondary); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); text-align:center; }
+    .stat-card__value { font-size:var(--text-2xl); font-weight:var(--font-weight-bold); color:var(--color-success); }
+    .stat-card__label { font-size:var(--text-xs); color:var(--color-text-tertiary); margin-top:var(--space-1); }
+  </style>
+</head>
+<body class="page-fade-in">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" id="navbar"><div class="navbar__inner"><a href="/" class="navbar__logo"><div class="navbar__logo-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>GradeCalc</a><ul class="navbar__links" role="list"><li><a href="/gpa-calculator.html" class="navbar__link">GPA Calculator</a></li><li><a href="/cgpa-to-percentage.html" class="navbar__link">CGPA → %</a></li><li><a href="/grade-needed-calculator.html" class="navbar__link">Grade Needed</a></li><li><a href="/wes-gpa-calculator.html" class="navbar__link">WES GPA</a></li></ul><div class="navbar__actions"><button class="theme-toggle" data-action="toggle-theme" aria-label="Toggle dark mode"><span data-theme-icon aria-hidden="true"></span></button><button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button></div></div></nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation"><button class="nav-drawer__close" id="nav-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button><a href="/" class="nav-drawer__link">Home</a><a href="/gpa-calculator.html" class="nav-drawer__link">GPA Calculator</a><a href="/cgpa-to-percentage.html" class="nav-drawer__link">CGPA to Percentage</a><a href="/percentage-to-gpa.html" class="nav-drawer__link">Percentage to GPA</a><a href="/wes-gpa-calculator.html" class="nav-drawer__link">WES GPA Calculator</a><a href="/grade-needed-calculator.html" class="nav-drawer__link">Grade Needed</a><a href="/uk-to-us-gpa.html" class="nav-drawer__link">UK to US GPA</a><a href="/uk-degree-classification.html" class="nav-drawer__link">UK Degree Classification</a></nav>
+
+  <main id="main" class="page-main">
+    <div class="page-header">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="page-header__breadcrumb__sep">›</span><span aria-current="page">Cumulative GPA Calculator</span></nav>
+      <h1 class="page-header__title">Cumulative GPA Calculator</h1>
+      <p class="page-header__desc">Enter your GPA and credit hours for each semester. The calculator combines them into a single weighted cumulative GPA. Add up to 10 terms. High Confidence — exact weighted arithmetic.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-layout__main">
+        <div class="calc-card">
+          <div class="calc-card__header">
+            <div class="calc-card__title">Cumulative GPA Calculator</div>
+            <div class="calc-card__subtitle">Cumulative GPA = Σ(GPA × Credits) ÷ Σ(Credits) · High Confidence · Max 10 terms</div>
+          </div>
+
+          <!-- Column headers -->
+          <div style="display:grid;grid-template-columns:1fr 120px 100px 40px;gap:var(--space-3);padding-bottom:var(--space-2);border-bottom:1px solid var(--color-border);">
+            <div style="font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;">Term <span style="font-weight:400;text-transform:none;">(optional)</span></div>
+            <div style="font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;">GPA (0–4.0)</div>
+            <div style="font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;">Credits</div>
+            <div></div>
+          </div>
+
+          <div id="terms-list" aria-label="Semester list"></div>
+
+          <div style="display:flex;gap:var(--space-3);margin-top:var(--space-4);">
+            <button id="add-term-btn" class="btn btn--secondary" style="flex:1;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+              Add Semester
+            </button>
+            <button id="calc-btn" class="btn btn--primary" style="flex:2;" disabled>Calculate Cumulative GPA</button>
+          </div>
+
+          <div id="result-box" class="result-box" style="margin-top:var(--space-6);display:none;" aria-live="polite"></div>
+          <div id="result-stats" class="result-stats" style="display:none;"></div>
+        </div>
+
+        <div class="content-section reveal">
+          <div class="prose">
+            <h2>What Is Cumulative GPA?</h2>
+            <p>Cumulative GPA (sometimes called overall GPA or institutional GPA) is the weighted average of all your grades across every semester or term you have completed at an institution. Unlike a single semester GPA, it represents your entire academic history at that school in one number. When graduate schools, scholarship committees, and employers ask for your GPA, they almost always mean your cumulative GPA — the figure printed on your official transcript.</p>
+
+            <h2>How Cumulative GPA Is Calculated</h2>
+            <p>The formula is: Cumulative GPA = Σ(semester GPA × semester credits) ÷ Σ(all credits). In practice, this means multiplying each semester's GPA by the number of credit hours taken that semester, summing all those products, and dividing by the total credit hours across all semesters. This is a weighted average — semesters with more credits exert more influence on your cumulative GPA than lighter semesters.</p>
+            <p>For example: Semester 1 — 3.5 GPA, 15 credits. Semester 2 — 3.0 GPA, 15 credits. Cumulative = (3.5 × 15 + 3.0 × 15) ÷ 30 = 97.5 ÷ 30 = 3.25. Each semester contributed equally because they had the same credit count.</p>
+
+            <h2>How Semesters Compound Over Time</h2>
+            <p>Understanding how semesters compound is essential for GPA planning. Early in your academic career, each semester can swing your cumulative GPA significantly — because the denominator (total credits) is small, each new semester's contribution is a large percentage of the total. As you accumulate more credits, the leverage per semester diminishes. A student with 15 credits who earns a 4.0 semester can jump their GPA dramatically; a student with 90 credits faces far more inertia.</p>
+            <p>This compounding works in both directions. An excellent final year can meaningfully boost a cumulative GPA built on a rocky start. Conversely, a difficult semester early in your studies will be diluted — but not erased — as you complete more coursework at higher performance levels.</p>
+
+            <h2>The Impact of a Strong or Weak Semester</h2>
+            <p>Consider a student who has completed 45 credits with a 3.0 cumulative GPA and takes 15 more credits. If that semester produces a 4.0 GPA: new cumulative = (3.0 × 45 + 4.0 × 15) ÷ 60 = (135 + 60) ÷ 60 = 3.25. A perfect semester moved the cumulative from 3.0 to 3.25 — a significant but bounded improvement. If instead the semester produces a 2.0 GPA: (3.0 × 45 + 2.0 × 15) ÷ 60 = (135 + 30) ÷ 60 = 2.75. One difficult semester can drop a solid GPA below the competitive threshold for many graduate programs.</p>
+
+            <h2>Grade Recovery Strategies</h2>
+            <p>If your cumulative GPA is lower than your target, strategic planning can help. First, use this calculator to model what GPA you need in remaining semesters to hit your target. If the required GPA is realistic (say, 3.7 when you've been averaging 3.2), aggressive study improvement may suffice. If the math requires 4.0 every remaining semester when you still have 60 credits to complete, the target may need adjustment. Second, prioritise high-credit courses — a 4.0 in a 4-credit course moves your GPA more than the same grade in a 1-credit course. Third, if your school has grade replacement or grade forgiveness policies, strategically retaking courses where you underperformed can boost your GPA in ways the raw formula alone cannot achieve.</p>
+
+            <h2>Cumulative GPA for International Students</h2>
+            <p>If you are an international student who completed undergraduate studies outside the US and are applying to US graduate programs, your institution's grading system may not use a 4.0 GPA scale. In that case, use this calculator to model your projected US GPA based on your planned graduate coursework, or to combine your already-converted CGPA terms. For initial conversion of your foreign GPA to a US equivalent, see the WES GPA Calculator and the CGPA to Percentage tool linked below.</p>
+
+            <h2>How to Use This Calculator</h2>
+            <p>Enter the semester GPA (0.0–4.0) and credit hours for each completed term. The term name field is optional but helps you stay organised. Add semesters using the "Add Semester" button — up to 10 terms. Click "Calculate Cumulative GPA" to see your weighted cumulative GPA, total credit hours, and number of terms. Results are labeled High Confidence because this is exact arithmetic — the formula is standard and there is no estimation involved. Use the AI Advisor to get personalised guidance on what your cumulative GPA means for your specific goals.</p>
+          </div>
+
+          <div class="faq-section" id="faq">
+            <h2 class="section-title" style="margin-top:var(--space-12);">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I calculate cumulative GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Cumulative GPA = Σ(semester GPA × semester credits) ÷ Σ(all credits). Multiply each semester's GPA by its credit hours, sum those products, then divide by total credit hours. This weighted average gives more weight to heavier semesters. Enter your data above and the calculator does the arithmetic for you.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does one semester affect cumulative GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">It depends on your total credit count. 15 credits out of 60 total = 20% weight. A perfect 4.0 semester on 15 credits raises a 60-credit 3.0 cumulative GPA to 3.2. As you accumulate more credits, each additional semester has proportionally less impact on your cumulative GPA.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I raise a 2.8 GPA to 3.0?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Yes — use the calculator to find out how. With 60 completed credits at 2.8 GPA, to reach 3.0 across 30 remaining credits you need those 30 credits to average 3.4 GPA. Enter your current terms and add future terms with projected GPAs to see what it takes to hit your target.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a cumulative GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Cumulative GPA is the weighted average of all your grades across all completed terms at an institution, weighted by credit hours. It appears on your official transcript and is the figure graduate schools, employers, and scholarship committees look at when evaluating your academic record.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does repeating a course help cumulative GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">It depends on your institution's policy. Some schools replace the original grade (grade forgiveness). Others keep both and average them. Others replace for GPA purposes but show both on the transcript. Check your registrar's academic policies before repeating a course specifically for GPA improvement.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What cumulative GPA do I need for grad school?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Most US graduate programs state a minimum of 3.0 cumulative GPA. However, average admitted GPAs at competitive programs are typically 3.5–3.9. A GPA below the stated minimum is not always automatic rejection — strong research, test scores, or recommendations can offset a lower GPA, especially with an upward trend.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many semesters to raise GPA from 3.0 to 3.5?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">With 60 credits at 3.0 GPA, reaching 3.5 requires approximately 60 additional credits at a 4.0 GPA — roughly 4 more full semesters of perfect grades. Raising GPA becomes progressively harder as your total credit count grows. Use this calculator to model your specific scenario with your actual credit and GPA numbers.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is cumulative GPA the same as overall GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+              <div class="faq-answer"><div class="faq-answer__content">Yes — cumulative GPA and overall GPA refer to the same concept: the weighted average of all grades across all completed terms at your institution. Institutional GPA is calculated across all semesters at that school. Transfer credits may or may not be included in cumulative GPA depending on your school's policy.</div></div>
+            </div>
+          </div>
+
+          <div class="related-section reveal">
+            <h2 class="section-title">Related Calculators</h2>
+            <div class="related-grid">
+              <a href="/gpa-calculator.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008z"/></svg></div><div><div class="related-card__title">GPA Calculator</div><div class="related-card__desc">Calculate GPA from individual course grades and credit hours</div></div></a>
+              <a href="/grade-needed-calculator.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75z"/></svg></div><div><div class="related-card__title">Grade Needed Calculator</div><div class="related-card__desc">Find what grade you need on a final exam to hit your target</div></div></a>
+              <a href="/percentage-to-gpa.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662"/></svg></div><div><div class="related-card__title">Percentage to GPA</div><div class="related-card__desc">Convert your percentage score to a US GPA equivalent</div></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc-layout__sidebar">
+        <div class="ad-slot ad-slot--sidebar" data-position="sidebar" aria-hidden="true"></div>
+        <div class="calc-card" style="padding:var(--space-5);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">Cumulative GPA formula</div>
+          <div style="background:var(--color-bg-secondary);border-radius:var(--radius-md);padding:var(--space-4);font-size:var(--text-xs);color:var(--color-text-secondary);line-height:1.6;">
+            <p style="margin:0 0 var(--space-2) 0;font-weight:600;color:var(--color-text-primary);">Weighted Average</p>
+            <p style="margin:0 0 var(--space-3) 0;font-family:monospace;">CGPA = Σ(GPA × Credits) ÷ Σ(Credits)</p>
+            <p style="margin:0 0 var(--space-2) 0;font-weight:600;color:var(--color-text-primary);">Example</p>
+            <p style="margin:0;">Sem 1: 3.5 × 15 = 52.5<br>Sem 2: 3.0 × 15 = 45.0<br>Sem 3: 3.8 × 12 = 45.6<br>Total: 143.1 ÷ 42 = <strong>3.41</strong></p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="footer__inner"><div><a href="/" class="footer__brand">GradeCalc</a><p class="footer__tagline">Honest grade conversion for international students.</p><p class="footer__copy">© 2026 GradeCalc. For informational purposes only.</p></div><ul class="footer__links"><li><a href="/" class="footer__link">All Calculators</a></li><li><a href="/cgpa-to-percentage.html" class="footer__link">CGPA to Percentage</a></li><li><a href="/percentage-to-gpa.html" class="footer__link">Percentage to GPA</a></li><li><a href="/gpa-calculator.html" class="footer__link">GPA Calculator</a></li></ul></div></footer>
+
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/ui.js" defer></script>
+  <script src="/js/ai-advisor.js" defer></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var termsList  = document.getElementById('terms-list');
+    var addBtn     = document.getElementById('add-term-btn');
+    var calcBtn    = document.getElementById('calc-btn');
+    var resultBox  = document.getElementById('result-box');
+    var statsBox   = document.getElementById('result-stats');
+    var MAX_TERMS  = 10;
+    var termCount  = 0;
+
+    function createTermRow(index) {
+      var row = document.createElement('div');
+      row.className = 'term-row';
+      row.dataset.index = index;
+      row.innerHTML =
+        '<input type="text" class="input term-label" placeholder="e.g. Fall 2024" aria-label="Term name (optional)">' +
+        '<input type="number" class="input term-gpa" placeholder="3.5" min="0" max="4" step="0.01" inputmode="decimal" aria-label="Semester GPA">' +
+        '<input type="number" class="input term-credits" placeholder="15" min="1" max="30" step="1" inputmode="numeric" aria-label="Credit hours">' +
+        '<button class="remove-btn" type="button" aria-label="Remove this term">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>' +
+        '</button>';
+
+      /* Remove button */
+      row.querySelector('.remove-btn').addEventListener('click', function () {
+        row.remove();
+        updateButtonStates();
+      });
+
+      /* Trigger button state on input change */
+      row.querySelectorAll('input').forEach(function (inp) {
+        inp.addEventListener('input', updateButtonStates);
+      });
+
+      return row;
+    }
+
+    function addTerm() {
+      if (termCount >= MAX_TERMS) return;
+      termCount++;
+      var row = createTermRow(termCount);
+      termsList.appendChild(row);
+      updateButtonStates();
+    }
+
+    function updateButtonStates() {
+      var rows = termsList.querySelectorAll('.term-row');
+      addBtn.disabled = rows.length >= MAX_TERMS;
+
+      /* Enable calc button only if at least 1 row has valid GPA and credits */
+      var hasValid = false;
+      rows.forEach(function (row) {
+        var gpaVal     = parseFloat(row.querySelector('.term-gpa').value);
+        var creditsVal = parseFloat(row.querySelector('.term-credits').value);
+        if (!isNaN(gpaVal) && gpaVal >= 0 && gpaVal <= 4 && !isNaN(creditsVal) && creditsVal > 0) {
+          hasValid = true;
+        }
+      });
+      calcBtn.disabled = !hasValid;
+    }
+
+    function calculate() {
+      var rows = termsList.querySelectorAll('.term-row');
+      var terms = [];
+      var allValid = true;
+
+      rows.forEach(function (row) {
+        var gpaInput     = row.querySelector('.term-gpa');
+        var creditsInput = row.querySelector('.term-credits');
+        var gpaVal       = parseFloat(gpaInput.value);
+        var creditsVal   = parseFloat(creditsInput.value);
+
+        /* Skip entirely blank rows */
+        if (gpaInput.value === '' && creditsInput.value === '') return;
+
+        var gpaVr     = window.Validation.gpa(gpaInput.value);
+        var creditsVr = window.Validation.gpa(creditsInput.value); /* reuse range validation */
+
+        if (!gpaVr.valid || isNaN(creditsVal) || creditsVal <= 0) {
+          allValid = false;
+          return;
+        }
+
+        terms.push({ gpa: gpaVr.value, credits: creditsVal });
+      });
+
+      if (!allValid || terms.length === 0) {
+        resultBox.style.display = 'none';
+        statsBox.style.display  = 'none';
+        return;
+      }
+
+      var data = window.Calculators.cumulativeGPA(terms);
+      resultBox.style.display = 'block';
+      window.ResultRenderer.render(resultBox, data);
+
+      /* Show supplemental stats */
+      statsBox.style.display = 'grid';
+      statsBox.innerHTML =
+        '<div class="stat-card"><div class="stat-card__value">' + data.result + '</div><div class="stat-card__label">Cumulative GPA</div></div>' +
+        '<div class="stat-card"><div class="stat-card__value">' + data.totalCredits + '</div><div class="stat-card__label">Total Credits</div></div>' +
+        '<div class="stat-card"><div class="stat-card__value">' + data.termCount + '</div><div class="stat-card__label">Terms Entered</div></div>';
+
+      if (window.AiAdvisor) window.AiAdvisor.setInputData({ cumulativeGPA: data.result, totalCredits: data.totalCredits, termCount: data.termCount, calculator: 'cumulative_gpa' });
+      if (window.Analytics) window.Analytics.calculatorUsed('cumulative_gpa');
+    }
+
+    addBtn.addEventListener('click', addTerm);
+    calcBtn.addEventListener('click', calculate);
+
+    /* Start with 2 rows */
+    addTerm();
+    addTerm();
+  });
+  </script>
+</body>
+</html>

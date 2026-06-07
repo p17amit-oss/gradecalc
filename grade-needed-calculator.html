@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-page="grade-needed">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Needed Calculator — What Score Do I Need to Pass?</title>
+  <meta name="description" content="Find the exact grade you need on remaining assessments to hit your target. Shows if your goal is achievable or mathematically impossible. Free, instant results.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/grade-needed-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOURDOMAIN.com/grade-needed-calculator.html">
+  <meta property="og:title" content="Grade Needed Calculator — What Score Do I Need to Pass?">
+  <meta property="og:description" content="Enter current grade, completed weight, and target — get the exact score you need on remaining assessments or a clear impossible warning.">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOURDOMAIN.com/"},{"@type":"ListItem","position":2,"name":"Grade Needed Calculator","item":"https://YOURDOMAIN.com/grade-needed-calculator.html"}]}</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Grade Needed Calculator","description":"Calculate the exact grade you need on remaining assessments to achieve your target grade.","url":"https://YOURDOMAIN.com/grade-needed-calculator.html","applicationCategory":"EducationApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What grade do I need on my final exam to pass?","acceptedAnswer":{"@type":"Answer","text":"Use the Grade Needed Calculator: enter your current overall grade, the percentage of the course already completed, and your passing target (e.g., 50% or 60%). The formula is: Required = (Target − Current × WeightDone) ÷ WeightRemaining. If the result is over 100%, passing is no longer mathematically possible."}},{"@type":"Question","name":"How do I calculate what grade I need?","acceptedAnswer":{"@type":"Answer","text":"Required grade = (Target − Current × (1 − Remaining Weight)) ÷ Remaining Weight. For example: current grade 70%, 70% of the course done, target 80%. Required = (80 − 70×0.7) ÷ 0.3 = (80 − 49) ÷ 0.3 = 103.3% — mathematically impossible."}},{"@type":"Question","name":"Is it possible to raise my GPA in one semester?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the impact decreases as you accumulate more credits. Early in your degree, one strong semester can significantly move your cumulative GPA. Later on, even a 4.0 semester has limited impact. The Grade Needed Calculator helps you plan what you need this semester to hit a specific term GPA target."}},{"@type":"Question","name":"What is the formula for grade needed to pass?","acceptedAnswer":{"@type":"Answer","text":"Required = (Target Grade − Current Grade × Weight Completed) ÷ Weight Remaining. All values in decimal form for Weight values (e.g., 70% completed = 0.70). If Required > 100, it is mathematically impossible. This is an exact arithmetic formula — High Confidence."}},{"@type":"Question","name":"What if I need more than 100% on my final?","acceptedAnswer":{"@type":"Answer","text":"If the calculator shows more than 100% is required, your target grade is no longer mathematically achievable given your current standing. Your options are: lower your target grade, speak with your instructor about extra credit, or accept the current trajectory and focus on subsequent courses."}},{"@type":"Question","name":"How do I calculate the grade I need to maintain my GPA?","acceptedAnswer":{"@type":"Answer","text":"If you want to maintain a 3.5 cumulative GPA this semester, use the Grade Needed Calculator with your current semester grade, the weight of completed assessments, and 3.5 as your target. Remember that 3.5 on a 4.0 scale equals roughly 87–89% in most grading systems."}},{"@type":"Question","name":"What percentage is a passing grade in US universities?","acceptedAnswer":{"@type":"Answer","text":"Passing typically requires a D or D- (60–65%) for course credit, though most graduate programs require a B- (80%) or better to count toward the degree. For graduate school applications, aim for B+ (87%) or above in relevant courses."}},{"@type":"Question","name":"Can this calculator handle weighted final exams?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your final exam is worth 40% of the course, enter 60% as your Completed Weight and set Current Grade to your score so far. The calculator finds what you need on that 40% remaining. You can also break up assessments — calculate each one independently."}}]}</script>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body class="page-fade-in">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <div class="navbar__logo-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>
+        GradeCalc
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="/gpa-calculator.html" class="navbar__link">GPA Calculator</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="navbar__link">CGPA → %</a></li>
+        <li><a href="/grade-needed-calculator.html" class="navbar__link navbar__link--active">Grade Needed</a></li>
+        <li><a href="/wes-gpa-calculator.html" class="navbar__link">WES GPA</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-action="toggle-theme" aria-label="Toggle dark mode"><span data-theme-icon aria-hidden="true"></span></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <button class="nav-drawer__close" id="nav-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <a href="/" class="nav-drawer__link">Home</a>
+    <a href="/gpa-calculator.html" class="nav-drawer__link">GPA Calculator</a>
+    <a href="/cgpa-to-percentage.html" class="nav-drawer__link">CGPA to Percentage</a>
+    <a href="/percentage-to-gpa.html" class="nav-drawer__link">Percentage to GPA</a>
+    <a href="/wes-gpa-calculator.html" class="nav-drawer__link">WES GPA Calculator</a>
+    <a href="/grade-needed-calculator.html" class="nav-drawer__link">Grade Needed</a>
+  </nav>
+
+  <main id="main" class="page-main">
+    <div class="page-header">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="page-header__breadcrumb__sep">›</span>
+        <span aria-current="page">Grade Needed Calculator</span>
+      </nav>
+      <h1 class="page-header__title">Grade Needed to Pass Calculator</h1>
+      <p class="page-header__desc">Enter your current grade, how much of the course is complete, and your target. Get the exact score you need — or a clear "not possible" if you're past the point of no return.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-layout__main">
+        <div class="calc-card">
+          <div class="calc-card__header">
+            <div class="calc-card__title">Grade Needed Calculator</div>
+            <div class="calc-card__subtitle">Formula: Required = (Target − Current × WeightDone) ÷ WeightRemaining</div>
+          </div>
+
+          <div class="field" id="field-current">
+            <label class="field__label" for="input-current">Current grade (%)</label>
+            <input type="number" id="input-current" class="input" placeholder="e.g. 72" min="0" max="100" step="0.1" inputmode="decimal">
+            <div class="field__hint">Your average so far across completed assessments</div>
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <div class="field" id="field-weight">
+            <label class="field__label" for="input-weight">Completed weight (%)</label>
+            <input type="number" id="input-weight" class="input" placeholder="e.g. 60" min="1" max="99" step="1" inputmode="decimal">
+            <div class="field__hint">What percentage of the course has been graded? (e.g., 60% if midterm + assignments = 60%)</div>
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <div class="field" id="field-target">
+            <label class="field__label" for="input-target">Target grade (%)</label>
+            <input type="number" id="input-target" class="input" placeholder="e.g. 80" min="0" max="100" step="0.1" inputmode="decimal">
+            <div class="field__hint">The overall course grade you want to achieve</div>
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <button id="calc-btn" class="btn btn--primary btn--full" disabled>Calculate</button>
+
+          <div id="result-box" class="result-box result-box--hidden" role="region" aria-label="Result" aria-live="polite"></div>
+        </div>
+
+        <!-- SEO Content -->
+        <div class="content-section reveal">
+          <div class="prose">
+            <h2>What is the grade needed calculator?</h2>
+            <p>This calculator answers one of the most common academic questions: "What do I need to score on my final exam (or remaining assessments) to end up with a specific overall grade?" It uses an exact arithmetic formula and gives you a clear, honest answer — including telling you clearly when the target is no longer possible.</p>
+
+            <h2>Understanding weighted grade calculations</h2>
+            <p>Most courses assign different weights to different assessments. A typical course might have: quizzes (10%), assignments (20%), midterm exam (30%), and final exam (40%). If you've completed the quizzes, assignments, and midterm, you've completed 60% of the course. The grade you earned on that 60% is your current grade for this calculation.</p>
+            <p>The remaining 40% (the final exam) is what you control next. The calculator finds the minimum score needed on that 40% to achieve your target overall grade.</p>
+
+            <h2>The formula explained</h2>
+            <p>Required = (Target − Current × WeightCompleted) ÷ WeightRemaining</p>
+            <p>All weight values are expressed as decimals (60% = 0.60). For example: current grade 70%, 70% complete, target 80%: Required = (80 − 70 × 0.70) ÷ 0.30 = (80 − 49) ÷ 0.30 = 103.3% — which is impossible.</p>
+
+            <h2>The "impossible" state</h2>
+            <p>This calculator will tell you clearly when a target is mathematically impossible, rather than showing a nonsensical number like "103%" without context. When your required score exceeds 100%, your options are to lower your target grade, speak with your instructor about extra credit or resubmission opportunities, or plan to retake the course if it's required for graduation or GPA maintenance.</p>
+
+            <h2>Worked examples</h2>
+            <p><strong>Example 1:</strong> Current 85%, 60% done, target 80%: Required = (80 − 85×0.6) ÷ 0.4 = (80 − 51) ÷ 0.4 = 72.5% → Achievable.</p>
+            <p><strong>Example 2:</strong> Current 90%, 80% done, target 85%: Required = (85 − 90×0.8) ÷ 0.2 = (85 − 72) ÷ 0.2 = 65% → Achievable with room to spare.</p>
+            <p><strong>Example 3:</strong> Current 70%, 70% done, target 80%: Required = (80 − 70×0.7) ÷ 0.3 = 103.3% → Mathematically impossible.</p>
+
+            <h2>Tips for grade planning</h2>
+            <p>Use this calculator at the start of each assessment period, not just before finals. Knowing early that a target is slipping gives you time to course-correct. For graduate school applications, aim for B+ (87%) or above in core courses — admissions committees pay attention to grade trends within your transcript, not just your overall GPA.</p>
+          </div>
+
+          <div class="faq-section" id="faq">
+            <h2 class="section-title" style="margin-top:var(--space-12);">Frequently Asked Questions</h2>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What grade do I need on my final exam to get an A?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Enter your current grade, the percentage of the course completed, and 93 (or 90, depending on your school's A cutoff) as your target. The calculator shows the exact score needed. If your current grade is already 93+ on 90%+ of the course, you've likely secured the A regardless of the final.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">How do I calculate what I need on my final to pass the class?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Use the formula: Required = (Passing Grade − Current × WeightDone) ÷ WeightRemaining. If your passing grade is 60%, current average 55%, with 70% of the course done: Required = (60 − 55×0.7) ÷ 0.3 = (60 − 38.5) ÷ 0.3 = 71.7%. Achievable with a solid final performance.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What does it mean if the calculator says impossible?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">If the required score exceeds 100%, your target grade cannot be achieved regardless of what you score on remaining assessments. This is a hard mathematical limit — not a motivational statement. Your options: lower your target, seek extra credit from your instructor, or plan for a retake. Better to know now than after the final.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Can I use this for calculating what I need to maintain my GPA?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Yes — use it at the course level first (what do I need to get a B+ in each course), then check the GPA Calculator to see what overall GPA those grades produce. A B+ is 87% in most systems. Set your target to 87% and see what you need on remaining assessments in each course.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What is the final exam grade calculator formula?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Required Final Score = (Desired Grade − Current Grade × (1 − Final Weight)) ÷ Final Weight. If your final is worth 40% (0.4), current 78%, target 80%: = (80 − 78 × 0.6) ÷ 0.4 = (80 − 46.8) ÷ 0.4 = 83%. Achievable. This is exact arithmetic — classified as High Confidence.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">How much can one good exam raise my grade?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">It depends entirely on the weight of that exam. A perfect 100 on a 40%-weight final when your current average is 70% on 60% of the course gives: (70×0.6 + 100×0.4) = 42 + 40 = 82% final grade. That's a 12-point improvement. The heavier the remaining assessment, the more it can move your grade.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What grade do I need to keep a 3.5 GPA this semester?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">A 3.5 GPA corresponds to roughly B+ (87–89%) on most grading scales. Set your target to 87% in the Grade Needed Calculator for each course. Then use the GPA Calculator to verify that achieving those course grades would produce a 3.5 semester GPA given your credit distribution.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Is this grade calculator accurate for Indian universities?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Yes — the underlying math is universal. Enter percentages (not CGPA) for current grade and target. If your university grades on a 10-point CGPA scale, multiply by 10 to get percentage (e.g., 7.5 CGPA ≈ 75%) or use your institution's official conversion. The formula itself is grade-system agnostic.</div></div></div>
+          </div>
+
+          <div class="related-section reveal">
+            <h2 class="section-title">Related Calculators</h2>
+            <div class="related-grid">
+              <a href="/gpa-calculator.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008z"/></svg></div>
+                <div><div class="related-card__title">GPA Calculator</div><div class="related-card__desc">Calculate weighted GPA from letter grades and credit hours</div></div>
+              </a>
+              <a href="/cgpa-to-percentage.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7"/></svg></div>
+                <div><div class="related-card__title">CGPA to Percentage</div><div class="related-card__desc">Convert CGPA using official university formulas</div></div>
+              </a>
+              <a href="/percentage-to-gpa.html" class="related-card">
+                <div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25"/></svg></div>
+                <div><div class="related-card__title">Percentage to GPA</div><div class="related-card__desc">Convert your final percentage to US GPA</div></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc-layout__sidebar">
+        <div class="ad-slot ad-slot--sidebar" data-position="sidebar" aria-hidden="true"></div>
+        <div class="calc-card" style="padding:var(--space-5);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">Quick examples</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="font-size:var(--text-xs);color:var(--color-text-secondary);">
+              <strong>Need A (93%):</strong><br>Current 88%, 60% done → need 100.7% → impossible
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-secondary);">
+              <strong>Need B+ (87%):</strong><br>Current 80%, 60% done → need 97.5% → borderline
+            </div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-secondary);">
+              <strong>Need B (83%):</strong><br>Current 80%, 60% done → need 87.5% → achievable
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <a href="/" class="footer__brand">GradeCalc</a>
+        <p class="footer__tagline">Honest grade conversion for international students.</p>
+        <p class="footer__copy">© 2026 GradeCalc. For informational purposes only.</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="/" class="footer__link">All Calculators</a></li>
+        <li><a href="/gpa-calculator.html" class="footer__link">GPA Calculator</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="footer__link">CGPA to Percentage</a></li>
+        <li><a href="/percentage-to-gpa.html" class="footer__link">Percentage to GPA</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/ui.js" defer></script>
+  <script src="/js/ai-advisor.js" defer></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fCurrent = document.getElementById('field-current');
+    const fWeight  = document.getElementById('field-weight');
+    const fTarget  = document.getElementById('field-target');
+    const btn      = document.getElementById('calc-btn');
+    const resultBox= document.getElementById('result-box');
+
+    function validateAll() {
+      const vC = window.Validation.percentage(document.getElementById('input-current').value);
+      const vW = window.Validation.remainingWeight(document.getElementById('input-weight').value);
+      const vT = window.Validation.percentage(document.getElementById('input-target').value);
+      return vC.valid && vW.valid && vT.valid;
+    }
+
+    function onInput() {
+      const vC = window.Validation.percentage(document.getElementById('input-current').value);
+      const vW = window.Validation.remainingWeight(document.getElementById('input-weight').value);
+      const vT = window.Validation.percentage(document.getElementById('input-target').value);
+
+      // Only show errors after blur, but track validity for button
+      btn.disabled = !(vC.valid && vW.valid && vT.valid);
+    }
+
+    function onBlur(fieldEl, validatorFn) {
+      return function() {
+        const v = validatorFn(this.value);
+        window.Validation.applyToField(fieldEl, v);
+        onInput();
+      };
+    }
+
+    document.getElementById('input-current').addEventListener('input', window.debounce(onInput, 300));
+    document.getElementById('input-weight').addEventListener('input', window.debounce(onInput, 300));
+    document.getElementById('input-target').addEventListener('input', window.debounce(onInput, 300));
+
+    document.getElementById('input-current').addEventListener('blur', onBlur(fCurrent, window.Validation.percentage));
+    document.getElementById('input-weight').addEventListener('blur', onBlur(fWeight, window.Validation.remainingWeight));
+    document.getElementById('input-target').addEventListener('blur', onBlur(fTarget, window.Validation.percentage));
+
+    btn.addEventListener('click', function() {
+      const current = parseFloat(document.getElementById('input-current').value);
+      const weight  = parseFloat(document.getElementById('input-weight').value);
+      const target  = parseFloat(document.getElementById('input-target').value);
+
+      const result = window.Calculators.gradeNeeded(current, weight, target);
+      window.ResultRenderer.render(resultBox, result);
+
+      if (window.AiAdvisor) window.AiAdvisor.setInputData({ current, completedWeight: weight, target, calculator: 'grade_needed' });
+      if (window.Analytics) window.Analytics.calculatorUsed('grade_needed');
+    });
+
+    // Allow Enter key
+    [document.getElementById('input-current'), document.getElementById('input-weight'), document.getElementById('input-target')].forEach(el => {
+      el.addEventListener('keydown', function(e) { if (e.key === 'Enter' && !btn.disabled) btn.click(); });
+    });
+  });
+  </script>
+</body>
+</html>

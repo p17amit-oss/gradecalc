@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-page="percentage-to-gpa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage to GPA Calculator — India to US GPA Conversion</title>
+  <meta name="description" content="Convert percentage to US GPA for Indian university students. Shows standard band mapping plus WES iGPA estimate — both with honest confidence labels. Free, instant.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/percentage-to-gpa.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOURDOMAIN.com/percentage-to-gpa.html">
+  <meta property="og:title" content="Percentage to GPA Calculator — India to US GPA">
+  <meta property="og:description" content="Convert your Indian university percentage to a US GPA equivalent. Shows both standard band mapping and WES iGPA estimate side-by-side.">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOURDOMAIN.com/"},{"@type":"ListItem","position":2,"name":"Percentage to GPA","item":"https://YOURDOMAIN.com/percentage-to-gpa.html"}]}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Percentage to GPA Calculator","description":"Convert Indian university percentage to US GPA with standard band mapping and WES iGPA estimate.","url":"https://YOURDOMAIN.com/percentage-to-gpa.html","applicationCategory":"EducationApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert my Indian percentage to US GPA?","acceptedAnswer":{"@type":"Answer","text":"There is no official standard. A common approximation maps 93%+ to 4.0, 90–92% to 3.7, 87–89% to 3.3, 83–86% to 3.0, and so on. However, US graduate schools evaluate Indian transcripts directly — they do not require you to convert. The WES iGPA is the most widely accepted conversion: 60%+ maps to 3.7–4.0."}},{"@type":"Question","name":"Is 75% a good percentage for US MS admission?","acceptedAnswer":{"@type":"Answer","text":"75% maps to approximately 2.0–2.3 US GPA on the standard band scale, but using WES iGPA methodology (which is what matters for credential evaluators), 75% from a Indian university typically falls in the 3.3–3.7 range. Mid-tier US MS programs generally accept WES GPA of 3.0+."}},{"@type":"Question","name":"What is 70 percent in GPA?","acceptedAnswer":{"@type":"Answer","text":"70% converts to approximately 1.7 US GPA on the standard 10-band scale (70–72% = 1.7), or roughly 3.3 WES iGPA for a First Division Indian university mark. Note that these are approximations — no official standard exists. US schools evaluate Indian transcripts in context."}},{"@type":"Question","name":"What is 80 percent in GPA for Indian students?","acceptedAnswer":{"@type":"Answer","text":"80% converts to approximately 2.7 US GPA on standard band mapping. Under WES iGPA methodology for Indian universities, 80% (First Division with Distinction) typically yields 3.7–4.0 GPA. The WES conversion is more favourable because it accounts for the harder grading at Indian institutions."}},{"@type":"Question","name":"Does percentage to GPA conversion have an official standard in the US?","acceptedAnswer":{"@type":"Answer","text":"No — the US has no national standard for converting international percentages to GPA. Each university and credential evaluator applies its own methodology. This is why this calculator labels percentage-to-GPA results as 'Estimate' and shows the WES-based result separately — so you understand the full picture."}},{"@type":"Question","name":"What GPA is 65 percent in India?","acceptedAnswer":{"@type":"Answer","text":"65% converts to 1.0 US GPA on the standard band scale. Under WES iGPA for Indian universities, 65% (above the 60% First Division threshold) maps to 3.7–4.0. This illustrates why the same percentage gives very different results depending on the methodology — always verify which one your target institution uses."}},{"@type":"Question","name":"What is a distinction percentage equivalent in US GPA?","acceptedAnswer":{"@type":"Answer","text":"A Distinction in Indian universities (typically 75%+ or 60%+, depending on institution) generally corresponds to 3.7–4.0 US GPA under WES iGPA methodology. Using standard band mapping, 75% = 2.0, which shows why WES provides a more contextually appropriate conversion for Indian students."}},{"@type":"Question","name":"How accurate is online percentage to GPA conversion?","acceptedAnswer":{"@type":"Answer","text":"Most online tools show false precision — a single GPA number from a percentage when no official standard exists. This calculator labels all percentage-to-GPA results as 'Estimate' and shows a range, not a single number. For the most accurate evaluation, use WES or a similar credential evaluator, or check with your target university's international admissions office."}}]}</script>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body class="page-fade-in">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo"><div class="navbar__logo-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>GradeCalc</a>
+      <ul class="navbar__links" role="list">
+        <li><a href="/gpa-calculator.html" class="navbar__link">GPA Calculator</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="navbar__link">CGPA → %</a></li>
+        <li><a href="/grade-needed-calculator.html" class="navbar__link">Grade Needed</a></li>
+        <li><a href="/wes-gpa-calculator.html" class="navbar__link">WES GPA</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-action="toggle-theme" aria-label="Toggle dark mode"><span data-theme-icon aria-hidden="true"></span></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <button class="nav-drawer__close" id="nav-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <a href="/" class="nav-drawer__link">Home</a>
+    <a href="/gpa-calculator.html" class="nav-drawer__link">GPA Calculator</a>
+    <a href="/cgpa-to-percentage.html" class="nav-drawer__link">CGPA to Percentage</a>
+    <a href="/percentage-to-gpa.html" class="nav-drawer__link">Percentage to GPA</a>
+    <a href="/wes-gpa-calculator.html" class="nav-drawer__link">WES GPA Calculator</a>
+    <a href="/grade-needed-calculator.html" class="nav-drawer__link">Grade Needed</a>
+  </nav>
+
+  <main id="main" class="page-main">
+    <div class="page-header">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="page-header__breadcrumb__sep">›</span><span aria-current="page">Percentage to GPA</span></nav>
+      <h1 class="page-header__title">Percentage to GPA Calculator</h1>
+      <p class="page-header__desc">Convert your percentage to a US GPA estimate. We show both the standard band mapping and the WES iGPA — the conversion most accepted by US universities — side by side.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-layout__main">
+        <div class="calc-card">
+          <div class="calc-card__header">
+            <div class="calc-card__title">Percentage to US GPA</div>
+            <div class="calc-card__subtitle">Shows standard band mapping + WES iGPA estimate</div>
+          </div>
+
+          <div class="field" id="field-pct">
+            <label class="field__label" for="input-pct">Your percentage <span style="color:var(--color-text-tertiary);font-weight:400;">(0 – 100)</span></label>
+            <input type="number" id="input-pct" class="input" placeholder="e.g. 78" min="0" max="100" step="0.01" inputmode="decimal" autocomplete="off">
+            <div class="field__error" role="alert"></div>
+          </div>
+
+          <!-- Two result boxes side by side -->
+          <div id="results-wrapper" style="display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-top:var(--space-6);">
+              <div>
+                <div style="font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:var(--space-2);">Standard Band</div>
+                <div id="result-standard" class="result-box" style="min-height:100px;padding:var(--space-4);" aria-live="polite"></div>
+              </div>
+              <div>
+                <div style="font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:var(--space-2);">WES iGPA Estimate</div>
+                <div id="result-wes" class="result-box" style="min-height:100px;padding:var(--space-4);" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="callout callout--warning" style="margin-top:var(--space-4);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="callout__icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+              <span>Neither conversion has an official standard. The US has no national percentage-to-GPA mapping. Graduate schools read Indian transcripts directly. These figures are for self-assessment only.</span>
+            </div>
+            <div style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-secondary);">
+              <strong>Which to use?</strong> For official applications, neither — your transcript speaks for itself. The WES iGPA is the number a credential evaluator would report. The Standard Band is what most online resources show. Both are estimates.
+              <a href="/wes-gpa-calculator.html" style="color:var(--color-accent);margin-left:4px;">See full WES GPA Calculator →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section reveal">
+          <div class="prose">
+            <h2>Why there is no standard percentage to GPA conversion</h2>
+            <p>The United States does not have a national standard for converting international percentages to its 4.0 GPA scale. This is not an oversight — it is deliberate. American universities developed the GPA system internally, and each institution applies its own methodology when evaluating international transcripts.</p>
+            <p>When you apply to a US graduate program, the admissions committee reads your Indian transcript as-is. They see your percentage or CGPA, compare it to other applicants from the same institution or region, and apply contextual judgment. They are not looking for a converted GPA from you.</p>
+
+            <h2>Why two conversions are shown</h2>
+            <p><strong>Standard band mapping</strong> is what most US-facing grade conversion charts use. It divides the 0–100 scale into 10-point bands and assigns a GPA value to each. It is intuitive but has a serious flaw for Indian students: it was designed for American schools where 60% is a C and 70% is barely a C+. Indian grading is harder — a 75% in IIT Delhi is not the same academic performance as a 75% at an American state school.</p>
+            <p><strong>WES iGPA methodology</strong> was developed specifically for Indian universities and accounts for this grading difficulty. Under WES, 60%+ from an Indian university maps to 3.7–4.0, not 2.3. This is why the WES number is typically higher than the standard band number for the same Indian percentage — and why it is the more widely accepted conversion for US and Canadian graduate applications.</p>
+
+            <h2>How US graduate schools view Indian percentages</h2>
+            <p>Most US graduate programs understand that Indian university grading is rigorous. A 70% from IIT or NIT is respected differently than 70% from a less selective school. Admissions committees at research universities routinely see Indian transcripts and have internal calibration. Context — your university ranking, your department's grading distribution — matters as much as the number itself.</p>
+            <p>For programs that require a credential evaluation, WES is the most widely accepted. Their iGPA conversion gives Indian students a more accurate picture of where they stand on a 4.0 scale relative to domestic US applicants.</p>
+
+            <h2>Using this calculator for self-assessment</h2>
+            <p>Use the Standard Band number to understand where you fall on common "required GPA" thresholds listed on university websites. Use the WES iGPA estimate to understand how a credential evaluator would present your grades. Use the AI Advisor below to get context on what your specific percentage means for the programs you're targeting.</p>
+          </div>
+
+          <div class="faq-section" id="faq">
+            <h2 class="section-title" style="margin-top:var(--space-12);">Frequently Asked Questions</h2>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">How do I convert percentage to GPA for Indian students?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">There is no official standard, but two approaches are commonly used. The standard band mapping divides the 0–100 scale into bands: 90%+ = 3.7–4.0, 80–89% = 2.7–3.3, 70–79% = 1.7–2.3. The WES iGPA, which is more accurate for Indian universities, maps 60%+ to 3.7–4.0 and accounts for the harder grading standards in India.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What is 75 percent in GPA for US universities?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Under standard band mapping, 75% = 2.0 US GPA. Under WES iGPA for Indian universities, 75% (First Division with Distinction threshold varies by institution) typically yields 3.7–4.0. The large gap between these two numbers illustrates exactly why you should use the WES number for US applications rather than the standard band mapping.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Is 70 percentage enough for US MS admission?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">70% from an Indian university is typically a First Division result. Under WES iGPA, this maps to approximately 3.3 GPA — sufficient for most mid-tier US MS programs (rank 20–50) which typically require 3.0+ GPA equivalent. For top 10 programs, 75%+ is generally expected. Your university reputation, research experience, and GRE/TOEFL scores matter alongside the grade.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What GPA is 85 percent from an Indian university?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Standard band: 85% = 3.0 GPA (83–86% band). WES iGPA: 85% (First Division with Distinction) = 3.7–4.0. For most US graduate programs, an 85% from a reputable Indian institution is competitive and will be viewed favourably by admissions committees familiar with Indian grading standards.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What percentage do I need for a 3.5 GPA equivalent?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Using standard band mapping, 3.5 falls between 3.3 (87–89%) and 3.7 (90–92%), so roughly 88–91%. Under WES iGPA for Indian universities, 3.5 corresponds to approximately 60%+ (the Distinction/First Division threshold), which shows how favourable the WES conversion is for Indian students compared to the standard band.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Do I need to convert my percentage for a US graduate application?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">No — you submit your original transcript, which shows your percentage or CGPA as your university issued it. Conversion to GPA is done by the university's international admissions team or by a credential evaluator (like WES) if required. Some applications ask you to self-report a GPA equivalent — in that case, the WES iGPA methodology is the most defensible conversion to use.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">Which is more accurate: standard band or WES GPA conversion?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">For Indian students specifically, WES iGPA is more appropriate. It accounts for the fact that Indian university grading is typically harder than American grading — a student scoring 65% at IIT is performing at a level comparable to a US student earning 3.5 GPA or higher. Standard band mapping was designed for American high school and college grading scales and systematically undervalues Indian academic performance.</div></div></div>
+            <div class="faq-item"><button class="faq-question" aria-expanded="false">What is 60 percent in GPA for Indian university students?<svg class="faq-question__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-answer"><div class="faq-answer__content">Standard band: 60–64% = 0.0 GPA (below the 65% threshold). WES iGPA: 60%+ (First Division with Distinction) = 3.7–4.0. This dramatic difference shows why standard band is inappropriate for Indian students. 60% at most Indian universities represents a First Division result — an academically solid outcome, not a failing grade.</div></div></div>
+          </div>
+
+          <div class="related-section reveal">
+            <h2 class="section-title">Related Calculators</h2>
+            <div class="related-grid">
+              <a href="/wes-gpa-calculator.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747"/></svg></div><div><div class="related-card__title">WES GPA Calculator</div><div class="related-card__desc">Full WES iGPA conversion for CGPA and percentage</div></div></a>
+              <a href="/cgpa-to-percentage.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662"/></svg></div><div><div class="related-card__title">CGPA to Percentage</div><div class="related-card__desc">Convert CGPA to percentage first, then use this tool</div></div></a>
+              <a href="/gpa-calculator.html" class="related-card"><div class="related-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008z"/></svg></div><div><div class="related-card__title">GPA Calculator</div><div class="related-card__desc">Calculate US GPA from letter grades and credit hours</div></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc-layout__sidebar">
+        <div class="ad-slot ad-slot--sidebar" data-position="sidebar" aria-hidden="true"></div>
+        <div class="calc-card" style="padding:var(--space-5);">
+          <div style="font-size:var(--text-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-3);">WES iGPA quick reference</div>
+          <table style="width:100%;font-size:var(--text-xs);border-collapse:collapse;">
+            <thead><tr><th style="text-align:left;padding:var(--space-1) 0;color:var(--color-text-tertiary);font-weight:500;">Percentage</th><th style="text-align:right;padding:var(--space-1) 0;color:var(--color-text-tertiary);font-weight:500;">WES GPA</th></tr></thead>
+            <tbody>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">60%+ (Distinction)</td><td style="text-align:right;color:var(--color-success);font-weight:600;">3.7–4.0</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">55–59% (1st Div)</td><td style="text-align:right;color:var(--color-success);font-weight:600;">3.3</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">50–54% (2nd Div)</td><td style="text-align:right;color:var(--color-warning);font-weight:600;">2.7</td></tr>
+              <tr style="border-top:1px solid var(--color-border-subtle)"><td style="padding:var(--space-2) 0;color:var(--color-text-secondary);">40–49% (Pass)</td><td style="text-align:right;color:var(--color-warning);font-weight:600;">2.0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div><a href="/" class="footer__brand">GradeCalc</a><p class="footer__tagline">Honest grade conversion for international students.</p><p class="footer__copy">© 2026 GradeCalc. For informational purposes only.</p></div>
+      <ul class="footer__links">
+        <li><a href="/" class="footer__link">All Calculators</a></li>
+        <li><a href="/wes-gpa-calculator.html" class="footer__link">WES GPA Calculator</a></li>
+        <li><a href="/cgpa-to-percentage.html" class="footer__link">CGPA to Percentage</a></li>
+        <li><a href="/gpa-calculator.html" class="footer__link">GPA Calculator</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/validation.js" defer></script>
+  <script src="/js/ui.js" defer></script>
+  <script src="/js/ai-advisor.js" defer></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    const input   = document.getElementById('input-pct');
+    const wrapper = document.getElementById('results-wrapper');
+    const rStd    = document.getElementById('result-standard');
+    const rWes    = document.getElementById('result-wes');
+
+    function calculate() {
+      const vr = window.Validation.percentage(input.value);
+      window.Validation.applyToField(document.getElementById('field-pct'), vr);
+      if (!vr.valid) { wrapper.style.display = 'none'; return; }
+
+      const pct = vr.value;
+      const std = window.Calculators.percentageToUSGPA(pct);
+      const wes = window.Calculators.wesFromPercentage(pct);
+
+      // Render standard result
+      rStd.classList.remove('result-box--hidden');
+      rStd.innerHTML = `<div class="result-header"><span class="result-number">${std.result}</span></div><div class="result-meta">Band: ${pct}% → ${std.result} GPA</div>`;
+
+      // Render WES result
+      rWes.classList.remove('result-box--hidden');
+      rWes.innerHTML = `<div class="result-header"><span class="result-number" style="color:var(--color-warning)">${wes.resultRange}</span></div><div class="result-meta">${wes.classification}</div>`;
+
+      wrapper.style.display = 'block';
+
+      if (window.AiAdvisor) window.AiAdvisor.setInputData({ percentage: pct, calculator: 'percentage_to_gpa' });
+      if (window.Analytics) window.Analytics.calculatorUsed('percentage_to_gpa');
+    }
+
+    input.addEventListener('input', window.debounce(calculate, 300));
+    input.addEventListener('blur', calculate);
+  });
+  </script>
+</body>
+</html>
