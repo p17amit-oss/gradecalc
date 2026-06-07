@@ -4,4 +4,4 @@ Allow: /
 # Block API routes from indexing
 Disallow: /api/
 
-Sitemap: https://YOURDOMAIN.com/sitemap.xml
+Sitemap: https://gradecalc-phi.vercel.app/sitemap.xml
