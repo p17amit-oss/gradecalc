@@ -291,18 +291,28 @@ function initMobileNav() {
    ============================================================ */
 
 function initFAQ() {
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const wasOpen = item.classList.contains('open');
+  // Use event delegation on document — works regardless of timing or dynamic content
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.faq-question');
+    if (!btn) return;
 
-      // Close all
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    const item = btn.closest('.faq-item');
+    if (!item) return;
 
-      if (!wasOpen) {
-        item.classList.add('open');
-      }
+    const wasOpen = item.classList.contains('open');
+
+    // Close all open items and reset aria-expanded
+    document.querySelectorAll('.faq-item.open').forEach(function(i) {
+      i.classList.remove('open');
+      const q = i.querySelector('.faq-question');
+      if (q) q.setAttribute('aria-expanded', 'false');
     });
+
+    // Toggle clicked item
+    if (!wasOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
 }
 

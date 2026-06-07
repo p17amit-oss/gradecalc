@@ -523,15 +523,17 @@
   transition: transform var(--transition-base);
 }
 
-.faq-item.open .faq-question__chevron { transform: rotate(180deg); }
+.faq-item.open .faq-question__chevron,
+.faq-question[aria-expanded="true"] .faq-question__chevron { transform: rotate(180deg); }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-slow);
+  transition: max-height 350ms ease;
 }
 
-.faq-item.open .faq-answer { max-height: 600px; }
+.faq-item.open .faq-answer,
+.faq-question[aria-expanded="true"] + .faq-answer { max-height: 600px; }
 
 .faq-answer__content {
   padding-bottom: var(--space-5);
