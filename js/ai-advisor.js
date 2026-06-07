@@ -128,6 +128,9 @@ const AiAdvisor = {
     const style = document.createElement('style');
     style.id = 'ai-advisor-styles';
     style.textContent = `
+      /* Ensure hidden attribute works even when display:flex is set */
+      .ai-panel[hidden] { display: none !important; }
+
       .ai-fab {
         position: fixed;
         bottom: 24px;
